@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airline.mapper.JoinMapper">
+
+<resultMap type="com.airline.vo.KakaoUserVO" id="joinMap">
+	<id property="userId" column="userid"/>
+	<result property="userNick" column="userNick"/>
+	<result property="gradeCode" column="gradeCode"/>
+	<result property="userNameK" column="userNameK"/>
+	<result property="userNameE" column="userNameE"/>
+	<result property="gender" column="gender"/>
+	<result property="pwd" column="pwd"/>
+	<result property="mail" column="mail"/>
+	<result property="phone" column="phone"/>
+	<result property="postCode" column="postCode"/>
+	<result property="address" column="address"/>
+	<result property="userReginumFirst" column="userReginumFirst"/>
+	<result property="userReginumLast" column="userReginumLast"/>
+	<result property="admin" column="admin"/>
+	<result property="enabled" column="enabled"/>
+	<collection property="authority" column="authMap" ofType="com.airline.vo.AuthorityVO" autoMapping="true">
+		<id property="userid" column="userid"/>
+		<id property="authority" column="authority"/>
+	</collection>
+</resultMap>
+
+<select id="checkEmail" resultType="String">
+	select mail from kakaouser where mail= #{email};
+</select>
+
+<select id="getUserIdByMail" resultType="String">
+	select userId from kakaouser where mail = #{email};
+</select>
+
+<select id="checkUserIdAndEmail" resultType="String">
+	select mail from kakaouser where mail= #{email} and userId = #{userId}
+</select>
+
+<update id="updatePwdByMailKey" parameterType="map">
+	update kakaouser set pwd = #{mail_key} where userId = #{userId}
+</update>
+
+<select id="getUserId" resultType="com.airline.vo.KakaoUserVO" parameterType="map">
+	select * from kakaouser where mail = #{email} and mail_key = #{mail_key}
+</select>
+
+<select id="checkMember" resultMap="joinMap">
+	select * from kakaouser a left join authorities b on a.userId=b.userid where 
+	a.userNameE = #{userNameE}
+	and a.userNameK = #{userNameK}
+	and a.gender = #{gender}
+	and a.userReginumFirst = #{userReginumFirst}
+	and a.userReginumLast = #{userReginumLast} 
+</select>
+
+<select id="getTerms" resultType="com.airline.vo.TermsVO">
+	select * from terms where termsCode = #{termscode}
+</select>
+
+<insert id="insertMember">
+	insert into kakaouser(
+		userId, userNick, userNameK, userNameE, gender, pwd, 
+		mail, 
+		phone,
+		postCode, 
+		address, userReginumFirst, userReginumLast)
+		
+		values(
+			#{userId}, #{userNick}, #{userNameK}, #{userNameE}, #{gender}, #{pwd},
+			 #{mail}, #{phone}, #{postCode}, #{address}, 
+			#{userReginumFirst}, #{userReginumLast}
+	)
+	
+</insert>
+
+<insert id="insertkakaoMember" parameterType="com.airline.vo.KakaoUserVO">
+	insert into kakaouser(
+		userId, userNick, userNameK, userNameE, gender, pwd, 
+		mail, 
+		phone,
+		postCode, 
+		address, userReginumFirst, userReginumLast)
+		
+		values(
+			#{userId}, #{userNick}, #{userNameK}, #{userNameE}, #{gender}, #{pwd},
+			 #{mail}, #{phone}, #{postCode}, #{address}, 
+			#{userReginumFirst}, #{userReginumLast}
+	)
+	
+</insert>
+
+<select id="userIdDuplicateCheck" resultType="Integer">
+	select count(userId) from kakaouser where userId = #{userId}
+</select>
+<select id="userNickDuplicateCheck" resultType="Integer">
+	select count(userNick) from kakaouser where userNick = #{userNick}
+</select>
+
+<select id="kakaoLoginCheck" resultMap="joinMap">
+	select * from kakaouser a left join authorities b
+	on a.userId = b.userid 
+	where userNameK = #{userNameK} and a.userId = #{userId}
+</select>
+
+<insert id="insertBasicTerms">
+	insert into termsmanage(userid, termsCode, agree)
+	values(#{userId}, 1, 'Y'), (#{userId}, 2, 'Y'), (#{userId}, 3, 'Y'), (#{userId}, 4, 'N')  
+</insert>
+
+<insert id="insertAllTerms">
+	insert into termsmanage(userid, termsCode, agree)
+	values(#{userId}, 1, 'Y'), (#{userId}, 2, 'Y'), (#{userId}, 3, 'Y'), (#{userId}, 4, 'Y')  
+</insert>
+
+<insert id="insertAuthorityMEMBER" >
+	insert into authorities values(#{userId}, 'ROLE_MEMBER')
+</insert>
+
+<insert id="insertAuthorityADMIN" >
+	insert into authorities values(#{userId}, 'ROLE_ADMIN')
+</insert>
+
+<select id="getAuthorities" resultType="org.springframework.security.core.authority.SimpleGrantedAuthority">
+    SELECT authority FROM authorities WHERE userid = #{email}
+</select>
+
+<insert id="insertUserlog">
+	insert into userlog(userid) values(#{userId})
+</insert>
+
+<insert id="insertGradelog">
+	insert into gradelog(userid) values(#{userId})
+</insert>
+
+<insert id="insertUserPay">
+	insert into userpay(userid) values(#{userId})
+</insert>
+
+<insert id="insertPoint">
+	insert into point(userid) values(#{userId})
+</insert>
+
+<update id="updateEnabled">
+	update kakaouser set enabled = 1 where mail = #{email} and mail_key = #{mail_key}
+</update>
+
+
+</mapper>

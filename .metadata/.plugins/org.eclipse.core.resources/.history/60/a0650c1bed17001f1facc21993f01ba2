@@ -1,0 +1,104 @@
+package kr.trip.service;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import kr.trip.domain.BoardVO;
+import kr.trip.domain.BoardlikeVO;
+import kr.trip.domain.Criteria;
+import kr.trip.domain.MemberVO;
+import kr.trip.mapper.BoardMapper;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j;
+
+@Service
+@RequiredArgsConstructor // 생성자 주입
+@Log4j
+public class BoardServiceImpl implements BoardService {
+	
+	private static final String IMAGE_DIRECTORY = "c:/upload";
+	
+	private final BoardMapper boardMapper;
+
+	// 게시물등록 서비스
+	@Override
+	public void register(BoardVO board) {
+	    log.info(board);
+	    boardMapper.insert(board); // 게시물 등록
+	}
+
+	// 게시물상세보기 서비스
+	@Override
+	public BoardVO get(int board_id) {
+		log.info(board_id);
+		return boardMapper.read(board_id);
+
+	}
+
+	// 게시물수정 서비스
+	@Override
+	public boolean modify(BoardVO board) {
+		log.info(board);
+		return boardMapper.update(board) == 1;
+	}
+
+	// 게시물삭제 서비스
+	@Override
+	public boolean remove(int board_id) {
+		log.info(board_id);
+		return boardMapper.delete(board_id) == 1;
+	}
+
+	// 게시물전체리스트뷰 서비스
+	@Override
+	public List<BoardVO> getList(Criteria cri) {
+		 int page = cri.getPageNum() - 1;
+	      
+	      page = page * 10;
+	      
+	      cri.setPage(page);
+	   //0 == 1, 10 == 2, 20 == 3  
+		return boardMapper.getListWithPaging(cri);
+	}
+
+	// 게시물총갯수 서비스
+	@Override
+	public int getTotal(Criteria cri) {
+		log.info(cri);
+		return boardMapper.getTotalCount(cri);
+	}
+	// 게시물 좋아요
+	@Override
+	public int addLike(BoardlikeVO like) {
+
+		boardMapper.like(like.getBoard_id());
+		return boardMapper.boardlike(like);
+	}
+	// 게시물 좋아요 취소
+	@Override
+	public int removeLike(BoardlikeVO like) {
+
+		log.info("service" + like);
+		log.info(like.getBoard_id());
+		boardMapper.likeremove(like.getBoard_id());
+		log.info("service2" + like);
+		boardMapper.boardunlike(like);
+	}
+	// 게시물 좋아요 카운트
+	@Override
+	public boolean getCountByboard_like(int board_id, String member_email) {
+		log.info(board_id);
+		return boardMapper.getCountByboard_like(board_id, member_email) == 1 ? true : false;
+	}
+
+	
+}

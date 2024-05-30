@@ -1,0 +1,26 @@
+var boardService = (function(){
+    
+  function removelike(like, callback, errorCallback) {
+    console.log("remove like..............." + JSON.stringify(like));
+    $.ajax({
+        type: "DELETE",
+        url: "/board/removelike",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(like),
+        success: function(msg, status, xhr) {
+            if (callback) {
+                callback(msg);
+            }
+        },
+        error: function(xhr, status, er) {
+            if (errorCallback) {
+                errorCallback(er);
+            }
+        }
+    });
+}
+
+    return {
+        removelike : removelike,
+    };
+})();

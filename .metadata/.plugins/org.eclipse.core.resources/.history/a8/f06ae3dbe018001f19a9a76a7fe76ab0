@@ -1,0 +1,59 @@
+package kr.trip.service;
+
+import kr.trip.domain.MemberVO;
+import kr.trip.mapper.MemberMapper;
+
+public class ImageServiceImpl implements ImageService{
+	
+	private final imageMapper imageMapper;
+	private final MemberMapper memberMapper;
+	
+	@Override
+	public void upload(ImageUploadDTO imageUploadDTO, String member_email) {
+        MemberVO member = MemberMapper.(member.email).orElseThrow(() -> new UsernameNotFoundException("이메일이 존재하지 않습니다."));
+        MultipartFile file = imageUploadDTO.getFile();
+
+        UUID uuid = UUID.randomUUID();
+        String imageFileName = uuid + "_" + file.getOriginalFilename();
+
+        File destinationFile = new File(uploadFolder + imageFileName);
+
+        try {
+            file.transferTo(destinationFile);
+
+            Image image = imageMapper.findByMember(member);
+            if (image != null) {
+                // 이미지가 이미 존재하면 url 업데이트
+                image.updateUrl("/profileImages/" + imageFileName);
+            } else {
+                // 이미지가 없으면 객체 생성 후 저장
+                image = Image.builder()
+                        .member(member)
+                        .url("/profileImages/" + imageFileName)
+                        .build();
+            }
+            imageRepository.save(image);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+	@Override
+	 public ImageResponseDTO findImage(String email) {
+		MemberVO member = memberMapper.findByEmail(email).orElseThrow(() -> new UsernameNotFoundException("이메일이 존재하지 않습니다."));
+        Image image = imageMapper.findByMember(member);
+
+        String defaultImageUrl = "/profileImages/anonymous.png";
+
+        if (image == null) {
+            return ImageResponseDTO.builder()
+                    .url(defaultImageUrl)
+                    .build();
+        } else {
+            return ImageResponseDTO.builder()
+                    .url(image.getUrl())
+                    .build();
+        }
+    }
+
+}

@@ -1,0 +1,7 @@
+package kr.trip.repository;
+
+
+public interface MemberRepository {
+	
+	Member findByMemberEmail(String member_email);
+}

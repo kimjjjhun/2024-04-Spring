@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airline.mapper.UserMapper">
+
+	<resultMap type="com.airline.vo.KakaoUserVO" id="userMap">
+		<id property="userId" column="userid" />
+		<result property="userId" column="userid" />
+		<result property="userNick" column="userNick" />
+		<result property="gradeCode" column="gradeCode" />
+		<result property="userNameK" column="userNameK" />
+		<result property="userNameE" column="userNameE" />
+		<result property="gender" column="gender" />
+		<result property="pwd" column="pwd" />
+		<result property="mail" column="mail" />
+		<result property="phone" column="phone" />
+		<result property="postCode" column="postCode" />
+		<result property="address" column="address" />
+		<result property="userReginumFirst" column="userReginumFirst" />
+		<result property="userReginumLast" column="userReginumLast" />
+		<result property="admin" column="admin" />
+		<result property="enabled" column="enabled" />
+		<collection property="authority" column="authMap" ofType="com.airline.vo.AuthorityVO" autoMapping="true">
+			<id property="userid" column="userid"/>
+			<id property="authority" column="authority"/>
+		</collection>
+	</resultMap>
+
+<!-- 	<resultMap type="com.airline.vo.AuthorityVO" id="authMap">
+		<result property="userid" column="userid" />
+		<result property="authority" column="authority" />
+	</resultMap> -->
+
+<!-- 	<select id="getUser" resultMap="userMap">
+		select user.userId, user.pwd, user.enabled, auth.authority
+		from kakaouser user left outer join authorities auth on user.userId = auth.userid where
+		user.userId=#{userId}
+	</select>
+ -->
+	<select id="getUser" resultMap="userMap">
+		select user.*, auth.authority
+		from kakaouser user left outer join authorities auth on user.userId = auth.userid where
+		user.userId=#{userId}
+	</select>
+
+	<!-- <select id="getq" resultType="int"> select count(*) from kakaouser 
+		</select> -->
+		
+	<select id="getGrade" resultType="String">
+		select usergrade from grade where gradecode=#{gradeCode}
+	</select>
+	
+	<select id="getPoint" resultType="com.airline.vo.UserPayVO">
+		select * from userpay where userid=#{userid}
+	</select>	
+	
+	<select id="getSumP" resultType="Integer">
+		select sum(mileage) from userpay where userid=#{userid}
+	</select>
+
+	<select id="getPoint3" resultType="com.airline.vo.UserPayVO">
+	<![CDATA[
+		select r.mileage,r.getDate from(select row_number() over(order by pno desc) rownum, p.* from userpay p where userid=#{userid})r where rownum<=3 
+	]]>  
+	</select>
+	
+	<select id="getSumK" resultType="int">
+		select sum(amount) from point where userid=#{userid}
+	</select>
+	
+	<select id="getKakao3" resultType="com.airline.vo.PointVO">
+	<![CDATA[
+		select * from(select row_number() over(order by buyDate desc) rownum, p.* from point p where userid=#{userid})r where rownum<=3 
+	]]>
+	</select>
+	
+	<select id="getDiary" resultType="com.airline.vo.BoardDiaryVO">
+	<![CDATA[
+		select * from(select row_number() over(order by regidate desc) rownum, p.* from boarddiary p where userid=#{userid})r where rownum<=3 
+	]]>
+	</select>
+	
+	<select id="getUserInfoAll" resultType="com.airline.vo.KakaoUserVO">
+	<![CDATA[	
+		select * from(select row_number() over() rownum, p.* from kakaouser p )r where rownum<=3 
+	]]>
+	</select>
+	
+<!-- 	<select id="getPointList" resultType="com.airline.vo.PointVO">
+		select *, sum(amount) as sum from point where amount>0 group by substr(buyDate,1,10);
+	</select> -->
+	
+	<select id="getSale" resultType="com.airline.vo.UserPayVO">
+		select substr(getDate,1,10) as getDate,sum(price) as sum from userpay group by substr(getDate,1,10)
+		<!-- select *, sum(price)as sum from userpay group by substr(getDate,1,10) -->
+	</select>
+	
+	<select id="reqCancel" resultType="com.airline.vo.CancelVO">
+	<![CDATA[
+		select * from(select row_number() over() rownum, p.* from cancel p )r where rownum<=3 
+	]]>
+	</select>
+	
+	<select id="getFlightres" resultType="com.airline.vo.FlightResVO">
+	<![CDATA[
+	select * from(select row_number() over(order by purchaseTime desc) rownum, p.* from flightreservation p )r where rownum<=3 
+	]]>
+	</select>
+	
+	<select id="getNotice" resultType="com.airline.vo.BoardNoticeVO">
+	<![CDATA[
+	select * from(select row_number() over(order by regidate desc) rownum, p.* from boardnotice p )r where rownum<=3 
+	]]>
+	</select>
+	
+	<select id="getEvent" resultType="com.airline.vo.BoardEventVO">
+	<![CDATA[
+	    select * from(select row_number() over(order by startDate desc, endDate desc) rownum, p.* from boardevent p )r where rownum<=3 
+	]]>
+	</select>
+	
+	<insert id="chargePoint">
+		insert into point(userid,amount) values(#{userid},#{amount})
+	</insert>
+	
+	<select id="getKPoint" resultType="com.airline.vo.PointVO">
+		select * from point where userid = #{userid} limit #{cri.pageNum},#{cri.amount}
+<!-- 	<![CDATA[
+		select c.* from(select b.* from(select row_number() over(order by buyDate asc) as num, a.* from point a where userid=#{userid})b where num<= #{cri.pageNum}* #{cri.amount})c where num>= (#{cri.pageNum}-1)* #{cri.amount}
+	 ]]>  -->
+	</select>
+	
+	<select id="getMPoint" resultType="com.airline.vo.UserPayVO">
+		select * from userpay where userid=#{userid} order by getDate desc limit #{cri.pageNum},#{cri.amount}
+<!-- 	<![CDATA[
+		select c.* from(select b.* from(select row_number() over(order by getDate asc) as num, a.* from userpay a where userid=#{userid})b where num<= #{cri.pageNum}* #{cri.amount})c where num>= (#{cri.pageNum}-1)* #{cri.amount}
+	 ]]>  -->
+	</select>
+	
+	<select id="getKTotal" resultType="int">
+		select count(*) from point where userid=#{userid}
+	</select>
+	
+	<select id="getMTotal" resultType="int">
+		select count(*) from userpay where userid=#{userid}
+	</select>
+	
+	<select id="getUserRes" resultType="com.airline.vo.FlightResVO">
+	
+		select * from flightreservation where userid=#{userid} order by purchaseTime desc limit #{cri.pageNum},#{cri.amount}
+	  
+	</select>
+	
+	<select id="getCountBuy" resultType="int">
+		select count(price) from userpay where userid=#{userid}
+	</select>
+	
+	<select id="getTotal" resultType="int">
+		select sum(price) from userpay where userid=#{userid}
+	</select>
+	
+	<select id="getFlightTotal" resultType="int">
+		select count(*) from flightreservation where userid=#{userid}	 
+	</select>
+<!--  -->	
+	<select id="findResByResNo" resultType="com.airline.vo.FlightResVO">
+		select * from flightreservation where resno=#{data}	 
+	</select>
+	
+	<insert id="insertCancel">
+		insert into cancel(userid,resno) values(#{userId},#{data})
+	</insert>
+<!--  -->	
+	<update id="cancelTicket">
+		update flightreservation set isCancel = 1 where resno=#{data}
+	</update>
+	
+	<update id="checkin">
+		update flightreservation set isCheckin = 1 where resno=#{data}
+	</update>
+	
+	<select id="getFlight3" resultType="com.airline.vo.FlightResVO">
+		select * from flightreservation where userid=#{userid} limit 0, 3
+	</select>
+	
+	<select id="getQna" resultType="com.airline.vo.BoardQnaVO">
+		select b.* from(select a.* from boardqna a where a.boardWriter = #{username})b where b.boardrelevel = 0 limit 0,3
+	</select>
+	
+	<select id="getUserName" resultType="String">
+		select userNick from kakaouser where userid=#{userid}
+	</select>
+	
+	<select id="getUserDiary" resultType="com.airline.vo.BoardDiaryVO">
+		select * from boarddiary where boardwriter = #{username} limit #{cri.pageNum},#{cri.amount}
+	</select>
+	
+	<select id="getUserDiaryCnt" resultType="int">
+		select count(*) from boarddiary where boardwriter = #{username}
+	</select>
+	
+	<select id="getUserQna" resultType="com.airline.vo.BoardQnaVO">
+		 select * from boardqna where boardreref in(select boardNum from boardqna where boardWriter=#{username}and boardreseq=0)limit #{cri.pageNum},#{cri.amount};
+	</select>
+	
+	<select id="getUserQnaCnt" resultType="int">
+		select count(*) from boardqna where boardreref in(select boardNum from boardqna where boardWriter=#{username} and boardreseq=0);
+	</select>
+	
+	<select id="getGradeLog" resultType="com.airline.vo.GradeLogVO">
+		select * from gradelog where userid=#{userid} order by updateDate desc limit #{cri.pageNum},#{cri.amount}
+	</select>
+	
+	<select id="getGradeLogCnt" resultType="int">
+		select count(*) from gradelog where userid=#{userid} 
+	</select>
+	
+	<select id="getFlightList3" resultType="com.airline.vo.FlightVO">
+		select * from airplaneschedule order by fulldeptime desc limit 0,3
+  </select>
+  
+	<select id="getMileage" resultType="int">
+		select totalMileage from userlog where userid = #{userid} order by lognum desc limit 1
+	</select>
+	
+	<update id="updateUserInfo" parameterType="map">
+		update kakaouser set
+		userNameK = #{userNameK}, 
+		userNameE = #{userNameE}, 
+		phone = #{phone}, 
+		postCode = #{postCode}, 
+		address = #{address}
+		where userId = #{userId}
+	</update>
+<update id="updateUserNick" parameterType="map">
+	update kakaouser set userNick = #{userNick} where userId = #{userId};
+</update>
+	
+	<update id="updateUserPwd" parameterType="map">
+		update kakaouser set pwd = #{pwd} where userId = #{userId}
+	</update>
+	
+	<select id="getEnabled" resultType="int">
+		select enabled from kakaouser where userId = #{userId}
+	</select>
+	
+</mapper>

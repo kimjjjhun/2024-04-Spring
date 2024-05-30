@@ -1,0 +1,17 @@
+package kr.trip.service;
+
+import org.springframework.stereotype.Service;
+
+import kr.trip.domain.PIDTO;
+
+@Service
+public interface ImageService {
+	
+	
+	//프로필사진 upload
+	void upload(ImageUploadDTO imageUploadDTO, String email);
+	
+	//이미지 url 조회
+	ImageResponseDTO findImage(String email);
+	
+}

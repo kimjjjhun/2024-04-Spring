@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airline.mapper.BoardQnaMapper">
+
+<select id="getList" resultType="com.airline.vo.BoardQnaVO">
+	SELECT * FROM boardqna order by boardreref desc,boardreseq asc  , boardrelevel asc , boardnum desc
+</select>
+
+<select id="getPageList" resultType="com.airline.vo.BoardQnaVO">
+     	<![CDATA[
+     	select * from boardqna  
+     	]]>
+     			<if test="type=='T'.toString()">   
+					where boardsubject like concat ('%',#{keyword},'%')
+				</if>	
+				<if test="type=='C'.toString()"> 
+					where boardcontent like concat ('%',#{keyword},'%')
+				</if>	
+				<if test="type=='W'.toString()">
+					where boardwriter like concat ('%',#{keyword},'%')
+				</if>	
+		<![CDATA[
+		order by boardreref desc,boardreseq asc  , boardrelevel asc , boardnum desc
+     	limit #{amount} offset #{newStart} 
+     	]]>
+</select>
+
+
+<select id="readOne" resultType="com.airline.vo.BoardQnaVO">
+	select * from boardqna where boardnum = #{boardnum}
+</select>
+
+<select id="getTotal" resultType="int">
+	select count(*) from boardqna 
+			<if test="type=='T'.toString()">
+				where boardsubject like concat ('%',#{keyword},'%')
+			</if>	 
+			<if test="type=='C'.toString()"> 
+				where boardcontent like concat ('%',#{keyword},'%')
+			</if>	
+			<if test="type=='W'.toString()">
+				where boardwriter like concat ('%',#{keyword},'%')
+			</if>
+</select>
+
+<delete id="deleteQna">
+	delete from boardqna where boardnum = #{boardnum} 
+</delete>
+
+<update id="updateQna">
+	update boardqna set boardcontent=#{boardcontent}, modifydate=now() where boardnum= #{boardnum}
+</update>
+
+<update id="updateReadCount">
+	update boardqna set readcount= readcount+1 where boardnum = #{boardnum}
+</update>
+
+<insert id="registerQna" useGeneratedKeys="true" keyProperty="boardnum">
+    <selectKey keyProperty="boardreref" order="BEFORE" resultType="int">
+        SELECT IFNULL(MAX(boardnum), 0) + 1 FROM boardqna
+    </selectKey>
+    <![CDATA[
+    INSERT INTO boardqna (boardsubject, boardcontent, boardwriter, boardreref)
+    VALUES (#{boardsubject}, #{boardcontent}, #{boardwriter}, #{boardreref})
+    ]]>
+</insert>
+
+<insert id="replyQna" parameterType="com.airline.vo.BoardQnaVO">
+     <selectKey keyProperty="repadmin" order="BEFORE" resultType="int">
+       <![CDATA[ select repadmin+1 from boardqna where boardreref = #{boardreref} and boardrelevel=0]]>
+    </selectKey>
+   
+    <![CDATA[
+    INSERT INTO boardqna (
+        boardsubject, boardcontent, boardwriter,
+        regidate, modifydate,
+        boardreref, boardrelevel, boardreseq
+    )
+    VALUES (
+        #{boardsubject}, #{boardcontent}, #{boardwriter},
+        now(), now(),
+        #{boardreref}, #{boardrelevel}, #{boardreseq}
+    )
+    ]]>
+</insert>
+
+<update id="updateRepAdmin">
+  <![CDATA[
+    UPDATE boardqna AS b1
+    JOIN (SELECT boardreref FROM boardqna WHERE boardnum = #{boardnum}) AS b2
+    SET b1.repadmin = b1.repadmin + 1
+    WHERE b1.boardreref = b2.boardreref AND b1.boardrelevel = 0 
+  ]]> 
+</update>
+
+
+<select id="selectBoardreref" resultType="com.airline.vo.BoardQnaVO">
+	SELECT * FROM boardqna WHERE boardreref = (SELECT boardreref FROM boardqna WHERE boardnum = ${boardnum}) AND boardrelevel = 0
+</select>
+
+<select id="myAnsweredList" resultType="com.airline.vo.BoardQnaVO">
+	select * from boardqna where boardwriter = (select userNick from kakaoUser where userId = #{userId}) and repadmin != 0 and boardrelevel=0
+</select>
+
+<select id="mynotAnwList" resultType="com.airline.vo.BoardQnaVO">
+select * from boardqna where boardwriter = (select userNick from kakaoUser where userId = #{userId}) and repadmin = 0 and boardrelevel=0
+</select>
+
+
+<select id="myAllList" resultType="com.airline.vo.BoardQnaVO">
+	select * from boardqna where boardwriter = (select userNick from kakaoUser where userId =#{userId}) and boardrelevel=0 order by boardnum desc
+</select>
+
+<select id="questionList" resultType="com.airline.vo.BoardQnaVO">
+	select * from boardqna where boardreref=(SELECT boardreref FROM boardqna WHERE boardnum = #{boardnum})
+</select>
+
+
+
+</mapper>

@@ -1,0 +1,100 @@
+package kr.trip.service;
+
+import java.io.IOException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
+import kr.trip.domain.AuthVO;
+import kr.trip.domain.MemberVO;
+import kr.trip.domain.TravelPlanVO;
+import kr.trip.mapper.MemberMapper;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j;
+
+@Service
+@RequiredArgsConstructor
+@Log4j
+public class MemberServiceImpl implements MemberService{
+
+	@Autowired
+	private MemberMapper memberMapper;
+	
+	@Override
+	public void register(MemberVO member) {
+		
+		memberMapper.insert(member);
+	}
+
+	@Override
+	public void insertAuth(AuthVO auth) {
+		memberMapper.insertAuth(auth);
+	}
+
+	@Override
+	public boolean selectId(String id) {
+		return memberMapper.selectId(id);
+	}
+
+	@Override
+	public List<String> findId(String name, String phone) {
+		System.out.println("----------findId-----------------");
+		System.out.println(name);
+		System.out.println(phone.trim());
+		
+		List<String> str = memberMapper.findId(name, phone.trim());
+		System.out.println(str);
+		return str;
+	}
+
+	@Override
+	public boolean update(MemberVO member) {
+		return memberMapper.update(member)==1;
+	}
+
+	@Override
+	public MemberVO read(String member_email) {
+		return memberMapper.read(member_email);
+	}
+	
+	// 개인정보 마이페이지 출력
+	@Override
+	public List<MemberVO> viewMember(String member_email) {
+			
+	List<MemberVO> member = memberMapper.viewMember(member_email);
+			
+	return member;
+	}
+			
+	// 여행정보 마이페이지 출력
+	@Override
+	public List<TravelPlanVO> viewPlan(String member_email) {
+				
+	log.info("=====================" + member_email);
+				
+	List<TravelPlanVO> tpvo = memberMapper.viewPlan(member_email);
+				
+	return tpvo;
+	}
+	
+	@Override
+	public void saveProfileImage(String member_email, MultipartFile file) {
+	    // 파일 저장 처리
+	    String imageFileName = member_email + "-" + file.getOriginalFilename();
+	    try {
+	        byte[] profileImageBytes = file.getBytes();
+	        // 파일을 저장하는 코드는 여기에 추가 가능
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	    
+	    // DB 저장
+	    MemberVO member = memberMapper.findByMemberEmail(member_email);
+	    member.setImage(imageFileName); // 이미지 파일 이름을 저장
+	    memberMapper.update(member); // 이미 존재하는 회원 정보를 업데이트하는 것으로 가정합니다.
+	}
+	
+}

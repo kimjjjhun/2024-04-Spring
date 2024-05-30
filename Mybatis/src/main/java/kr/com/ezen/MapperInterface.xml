@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.com.ezen.MapperInterface">
+
+
+
+	<!-- 정보삽입,수정,삭제 -->
+	<insert id="insertMember">
+		insert into Member (id,name,phone,address)
+		values (#{id},#{name},#{phone},#{address})
+	</insert>
+
+	<update id="updateMember">
+		update Member set
+		name = #{name},
+		phone = #{phone},
+		address = #{address}
+		where id = #{id}
+	</update>
+
+	<delete id="deleteMember">
+		delete from Member where id = #{id}
+	</delete>
+
+	<!-- 선택한멤버정보 가져오기 --> <!-- 값을 다시 받아오기때문에 resultType은필수다. -->
+	<select id="selectMember" resultType="kr.com.ezen.MemberVO">
+		SELECT * FROM Member WHERE ID = #{id}
+	</select>
+	
+	<select id="selectMemberAll" resultType="kr.com.ezen.MemberVO">
+		SELECT * FROM Member order by ID desc
+	</select>
+
+</mapper>

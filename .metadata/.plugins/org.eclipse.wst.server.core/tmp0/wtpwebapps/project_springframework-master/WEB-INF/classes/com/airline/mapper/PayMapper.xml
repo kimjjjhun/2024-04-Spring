@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airline.mapper.PayMapper">
+
+	<insert id="chargePoint">
+		insert into point(userid, amount) values(#{userid}, #{amount})
+	</insert>
+	
+	<insert id="updatePoint">
+		insert into userpay(userid,mileage) values(#{userid},#{point}) 
+	</insert>
+
+	<insert id="updateKakao">
+		insert into point(userid, amount) values(#{userid}, #{kakao})
+	</insert>
+	
+</mapper>

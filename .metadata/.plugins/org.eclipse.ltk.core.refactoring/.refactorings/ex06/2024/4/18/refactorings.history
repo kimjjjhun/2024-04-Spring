@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ReplyMapper.xml&apos; to &apos;ReplyMapper.xml&apos;&#x0D;&#x0A;- Original project: &apos;ex06&apos;&#x0D;&#x0A;- Destination element: &apos;ReplyMapper.xml&apos;&#x0D;&#x0A;- Original element: &apos;ReplyMapper.xml&apos;" description="Copy file" element1="src/main/resources/org/zerock/mapper/ReplyMapper.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1714457598790" target="/ex06/src/main/resources/org/zerock/mapper/ReplyMapper.xml" units="0" version="1.0"/>
+</session>

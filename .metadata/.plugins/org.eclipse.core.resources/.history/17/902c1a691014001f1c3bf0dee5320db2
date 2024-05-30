@@ -1,0 +1,339 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sec"
+	uri="http://www.springframework.org/security/tags"%>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../resources/board/list.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<style>
+	/**연도, 월, 버튼 섹션**/
+.top_sec{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.btn{
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.dateTitle{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -1.25px;
+  margin: 0 30px;
+}
+
+/**캘린더 섹션**/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+}
+
+.grid div {
+  padding: 10px 5px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #bbb3f4;
+  border-radius: 5px;
+}
+
+.dateHead div{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  background-color: #bbb3f4;
+  color: #fff;
+}
+
+/*일요일*/
+.dateHead .sunDay{
+  background-color: rgba(255, 0, 0, 0.6);
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.dateBoard div{
+  padding: 20px 0;
+}
+
+/*빈칸*/
+.noneDay{
+  background-color: rgba(187, 179, 244, 0.3);
+}
+
+div.today{
+  background-color: red;
+}
+
+td{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  border:2px border-color:#3333FF;
+  border-radius: 8px;
+}
+
+button{
+  width: 35px;
+  height: 35px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.today{
+  color: #fff;
+}
+
+.sunD{
+  color: red;
+}
+
+.satD{
+  color: blue;
+}
+	</style>
+
+</head>
+
+<%@include file="../header.jsp"%>
+
+<body>
+	<div class="page-title">
+		<div class="container">
+			<h3 style="margin-top: 30px;"><a class="nav-link" href="/board/list"><strong>M Y P A G E</strong></a></h3>
+		</div>
+	</div>
+
+	<!-- board list area -->
+	<div id="board-list">
+		<div class="container">
+			<table class="board-table">
+				<thead>
+					<tr>
+						 <th scope="col" class="th-num">계획</th>
+						 <th scope="col" class="th-date">NAME</th>
+						 <th scope="col" class="th-date">REGDATE</th>
+						<th scope="col" class="th-date">PLAN GO</th>
+						<th scope="col" class="th-date">PLAN END</th>
+						<th scope="col" class="th-date">TRIP DAY</th>
+						<th scope="col" class="th-date">교통편</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<c:forEach var="member" items="${list}">
+						<tr>
+							<td>${plan.plan_id}</td>
+							<td>${board.member_email}</td>
+							<td><fmt:formatDate value="${plan.regdate}"	pattern="yyyy-MM-dd" /></td>
+							<td><fmt:formatDate value="${plan.go}"	pattern="yyyy-MM-dd" /></td>
+							<td><fmt:formatDate value="${plan.end}"	pattern="yyyy-MM-dd" /></td>
+							<td><fmt:formatDate value="${plan.day}"	pattern="yyyy-MM-dd" /></td>
+							<td>${plan.plan_tpa}</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">일정 선택</button><br>
+	<button data-oper='list' class="btn btn-dark" style="margin-top: 20px; margin-right: 20px; float: right;">돌아가기</button>
+
+			<!-- 페이징 처리 -->
+	<div class="row">
+		<div class="col-lg-12">
+			<ul class="pagination"
+				style="float: right; margin-right: 100px; margin-top: 30px">
+				<c:if test="${pageMaker.prev}">
+					<li class="page-item"><a class="page-link"
+						href="${pageMaker.startPage - 1}">이전</a></li>
+				</c:if>
+				<c:forEach var="num"
+					begin="${pageMaker.startPage > 0 
+						? pageMaker.startPage : 1}"
+					end="${pageMaker.endPage}">
+					<li class="page-item ${pageMaker.cri.pageNum == num ? "active" : ""} ">
+						<a class="page-link" href="${num}">${num}</a>
+					</li>
+				</c:forEach>
+
+				<c:if test="${pageMaker.next}">
+					<li class="page-item"><a class="page-link"
+						href="${pageMaker.endPage}">다음</a></li>
+				</c:if>
+
+			</ul>
+		</div>
+	</div>
+
+	<form id="actionForm" action="/board/list" method="get">
+		<input type="hidden" name="pageNum" value=${pageMaker.cri.pageNum}>
+		<input type="hidden" name="amount" value=${pageMaker.cri.amount}>
+		<input type="hidden" name="type" value=${pageMaker.cri.type}>
+		<input type="hidden" name="keyword" value=${pageMaker.cri.keyword}>
+	</form>
+			<!-- End 페이징 처리 -->
+			
+			<!-- The Modal -->
+<div class="modal-dialog modal-lg">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <table id="calendar">
+    <tr>
+        <td>
+            <button type="button" onclick="prevCalendar()">&lt;</button>
+        </td>
+        <td align="center" id="tbCalendarYM" colspan="5">
+          yyyy년 m월
+        </td>
+        <td>
+          <button onclick="nextCalendar()">&gt;</button>
+        </td>
+    </tr>
+    <tr>
+        <td align="center"><div style>일</div></td>
+        <td align="center">월</td>
+        <td align="center">화</td>
+        <td align="center">수</td>
+        <td align="center">목</td>
+        <td align="center">금</td>
+        <td align="center"><font color ="blue">토</td>
+    </tr> 
+</table>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+			
+			
+			
+
+	
+	<!-- 캘린더 모달 스크립트-->
+	<script>
+	let today = new Date();//오늘 날짜//내 컴퓨터 로컬을 기준으로 today에 Date 객체를 넣어줌
+	let date = new Date();//today의 Date를 세어주는 역할
+
+	//이전 달
+	function prevCalendar() {
+	  today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+	  buildCalendar();
+	}
+
+	//다음 달
+	function nextCalendar() {
+	  today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+	  buildCalendar();
+	}
+
+	//현재 달
+	function buildCalendar(){
+	  let doMonth = new Date(today.getFullYear(),today.getMonth(),1); //이번 달의 첫째 날
+	  let lastDate = new Date(today.getFullYear(),today.getMonth()+1,0); // 이번 달의 마지막 날
+	  let tbCalendar = document.getElementById("calendar"); // 달력 출력
+	  let tbCalendarYM = document.getElementById("tbCalendarYM"); //상단 연, 월 출력
+	  
+	  //new를 찍지 않아서 month는 +1을 더해줘야 한다. 
+	  tbCalendarYM.innerHTML = today.getFullYear() + "년 " + (today.getMonth() + 1) + "월"; 
+
+	  /* 이번달이 끝나면 다음달로 넘겨주는 역할 // 남은 테이블 줄 삭제 */
+	  // console.log(tbCalendar)
+	  while (tbCalendar.rows.length > 2) {
+	    tbCalendar.deleteRow(tbCalendar.rows.length-1);
+	    //테이블의 tr 갯수 만큼의 열 묶음은 -1칸 해줘야지 
+	    //30일 이후로 담을달에 순서대로 열이 계속 이어진다.
+	  }
+	  
+	  /*초기화*/
+	  let row = null;
+	  row = tbCalendar.insertRow();
+	  let cnt = 0;// count cell의 갯수를 세어줌, ? 1일이 시작되는 칸을 맞추어 줌
+	  
+	  //이번달의 day만큼 돌림
+	  for (i=0; i<doMonth.getDay(); i++) {
+	    cell = row.insertCell(); //열 한칸한칸 계속 만들어주는 역할
+	    cnt = cnt + 1; //열의 갯수를 계속 다음으로 위치하게 해주는 역할
+	  }
+	  
+	  /*달력 출력*/
+	  //1일부터 마지막 일까지 돌림
+	  for (i=1; i<=lastDate.getDate(); i++) { 
+	    cell = row.insertCell();
+	    cell.innerHTML = i; //셀을 1부터 마지막 day까지 HTML 문법에 넣어줌
+	    cnt = cnt + 1; //열의 갯수를 계속 다음으로 위치하게 해주는 역할
+	    
+	    //일요일 계산
+	    if (cnt % 7 == 1) { // 나머지가 1이면 cnt가 1번째에 위치함을 의미한다
+	      cell.innerHTML = `<div class="sunD">${i}</div>`
+	    }
+	    
+	    //토요일 계산
+	    if (cnt%7 == 0){
+	      // cell.innerHTML = "<font color=blue>" + i
+	      cell.innerHTML = `<div class="satD">${i}</div>`
+	      row = calendar.insertRow(); //토요일 다음에 올 셀을 추가
+	    }
+	    
+	    /*오늘의 날짜에 노란색 칠하기*/
+	    if (today.getFullYear() == date.getFullYear() && today.getMonth() == date.getMonth() && i == date.getDate()) {
+	      cell.bgColor = "green";
+	      cell.classList.add("today");
+	    }
+	  }
+	}
+
+	buildCalendar();
+	</script>
+
+</body>
+</html>
+
+<%@include file="../footer.jsp"%>

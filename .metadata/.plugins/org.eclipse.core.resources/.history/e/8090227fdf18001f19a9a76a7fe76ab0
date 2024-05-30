@@ -1,0 +1,5 @@
+package kr.trip.service;
+
+public interface ImageService {
+
+}

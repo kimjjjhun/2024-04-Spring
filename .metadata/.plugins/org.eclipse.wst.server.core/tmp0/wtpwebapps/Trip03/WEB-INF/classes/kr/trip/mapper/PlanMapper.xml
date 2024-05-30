@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.trip.mapper.PlanMapper">
+<select id="getContentAreaList" resultType="kr.trip.domain.ContentVO">
+SELECT * FROM content WHERE areaname = #{areaname}
+</select>
+
+<insert id="insertTravelContent">
+INSERT INTO travelContent (plan_id, content_id, day, time) VALUES(#{plan_id}, #{content_id}, #{day}, #{time})
+</insert>
+
+
+<delete id="deleteContent">
+delete from travelcontent where tcontent_id = #{tcontent_id}
+</delete>
+
+<delete id="deleteContentAll">
+delete from travelcontent where plan_id = #{plan_id}
+</delete>
+</mapper>

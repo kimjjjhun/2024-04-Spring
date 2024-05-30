@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;includes&apos;&#x0D;&#x0A;- Original project: &apos;Travel_Scheduling_Planner-main.zip_expanded&apos;&#x0D;&#x0A;- Destination element: &apos;includes&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Modal.module.css&#x0D;&#x0A;     Header.module.css" description="Copy files" element1="Travel_Scheduling_Planner-main/FE/src/components/css/Modal.module.css" element2="Travel_Scheduling_Planner-main/FE/src/components/css/Header.module.css" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1713862020396" target="/ex03/src/main/webapp/WEB-INF/views/includes" units="0" version="1.0"/>
+</session>

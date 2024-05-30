@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;ex93&apos; to &apos;ex03&apos;&#x0D;&#x0A;- Original project: &apos;InputOutputStream&apos;&#x0D;&#x0A;- Original element: &apos;InputOutputStream/src/ex93&apos;&#x0D;&#x0A;- Renamed element: &apos;InputOutputStream/src/ex03&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;ex93&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;ex93" name="ex03" qualified="false" references="true" stamp="1714372835010" textual="false" version="1.0"/>
+</session>

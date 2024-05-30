@@ -1,0 +1,70 @@
+package kr.trip.service;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import kr.trip.domain.BoardVO;
+import kr.trip.domain.Criteria;
+import kr.trip.domain.ReplyPageDTO;
+import kr.trip.domain.ReplyVO;
+import kr.trip.mapper.BoardMapper;
+import kr.trip.mapper.ReplyMapper;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j;
+
+@Log4j
+@Service
+@RequiredArgsConstructor
+public class ReplyServiceImpl implements ReplyService{
+	
+	private final ReplyMapper replyMapper;
+	
+	private final BoardMapper boardMapper;
+	@Transactional
+	@Override
+	public int register(ReplyVO reply) {
+		
+		boardMapper.updateReplyCnt(reply.getBoard_id(), 1);
+		
+		return replyMapper.insert(reply);
+	}
+
+	@Override
+	public ReplyVO get(int replyNum) {
+		
+		return replyMapper.read(replyNum);
+	}
+
+	@Override
+	public int modify(ReplyVO reply) {
+		
+		return replyMapper.update(reply);
+	}
+	
+	@Transactional
+	@Override
+	public int remove(int replyNum) {
+		
+		ReplyVO replyVO = replyMapper.read(replyNum);
+		boardMapper.updateReplyCnt(replyVO.getBoard_id(), -1);
+		return replyMapper.delete(replyNum);
+	}
+
+	@Override
+	public ReplyPageDTO getList(Criteria cri, int board_id) {
+		 
+		log.info("들어오냐====================================");
+		
+		int page = cri.getPageNum() - 1;
+	      
+	      page = page * 10;
+	      
+	      cri.setPage(page);
+		return new ReplyPageDTO(
+				replyMapper.getCountByboard_id(board_id),
+				replyMapper.getListWithPaging(cri, board_id)
+				);
+	}
+	
+	
+}

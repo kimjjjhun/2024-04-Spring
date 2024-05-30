@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.trip.mapper.AdminMapper">
+<insert id="insertContent">
+INSERT INTO content (content_id, addr1, addr2, phone, cExplain, areaname, contentType
+<if test="likeNum != null">,likeNum</if>
+<if test="image1 != null">,image1</if>
+) VALUES
+(#{content_id}, #{addr1}, #{addr2}, #{phone}, #{cExplain}, #{areaname}, #{contentType}
+ <if test="likeNum != null">, #{likeNum}</if>
+<if test="likeNum != null">, #{image1}</if>
+)
+</insert>
+</mapper>

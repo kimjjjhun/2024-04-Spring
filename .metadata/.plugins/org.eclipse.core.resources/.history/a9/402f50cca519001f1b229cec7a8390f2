@@ -1,0 +1,44 @@
+package kr.trip.domain;
+
+import java.sql.Blob;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.web.multipart.MultipartFile;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+/*CREATE TABLE board(
+   board_id int not null PRIMARY KEY,
+   writer VARCHAR(50) NOT NULL, 
+   title VARCHAR(500) NOT NULL,
+   content VARCHAR(5000) NOT NULL,
+   image longblob,                #게시글 이미지첨부
+   regdate DATETIME DEFAULT current_timestamp,
+   updateDate DATETIME DEFAULT current_timestamp,
+   replyNum int,                # 게시글 댓글수
+   likeNum int,
+   viewcnt int                # 게시글 조회수
+);
+*/
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class BoardVO {
+	private int board_id;
+	private String title;
+	private String content;
+	private String member_email;
+	private String image;
+	private Date regdate;
+    private Date updateDate;
+    private int replyNum;
+    private int likeNum;
+    private int replyCnt;
+    
+}

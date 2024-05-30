@@ -1,0 +1,83 @@
+package kr.trip.controller;
+
+import org.apache.ibatis.annotations.Delete;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import kr.trip.domain.Criteria;
+import kr.trip.domain.ReplyPageDTO;
+import kr.trip.domain.ReplyVO;
+import kr.trip.service.ReplyService;
+import lombok.RequiredArgsConstructor;
+
+@RestController // 바디에 값을 전달하기위해 rest
+@RequestMapping("/reply")
+@RequiredArgsConstructor
+public class ReplyController {
+	
+	private final ReplyService replyService;
+	
+	
+	@PreAuthorize("isAuthenticated()")
+	@PostMapping(value = "/new", consumes = "application/json",
+	produces = {MediaType.TEXT_PLAIN_VALUE})
+	public ResponseEntity<String> create(@RequestBody ReplyVO reply){
+		int insertCount = replyService.register(reply);
+		
+		return insertCount == 1 ? new ResponseEntity<String>("success", HttpStatus.OK) 
+							    : new ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+	@GetMapping(value = "/{replyNum}", produces = {MediaType.APPLICATION_JSON_VALUE})
+	public ResponseEntity<ReplyVO> get(@PathVariable("replyNum")int replyNum){
+		
+		ReplyVO vo = replyService.get(replyNum);
+		
+		return new ResponseEntity<ReplyVO>(vo, HttpStatus.OK);
+	}
+	
+	@PreAuthorize("principal.username == #member_email")
+	@DeleteMapping(value = "/{replyNum}", consumes = "application/json", produces = {MediaType.APPLICATION_JSON_VALUE})
+	public ResponseEntity<String> delete(@RequestBody ReplyVO vo, @PathVariable("replyNum") int replyNum) {
+	    return replyService.remove(replyNum) == 1
+	            ? new ResponseEntity<String>("success", HttpStatus.OK)
+	            : new ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+	@PreAuthorize("principal.username == #member_email")
+	@PutMapping(value = "/{replyNum}" , consumes = "application/json" , produces = {MediaType.APPLICATION_JSON_VALUE})
+	public ResponseEntity<String> update(@PathVariable("replyNum")int replyNum,@RequestBody ReplyVO reply){
+		
+		reply.setReplyNum(replyNum);
+		
+		return replyService.modify(reply) == 1 
+				? new ResponseEntity<String>("success", HttpStatus.OK)
+				: new ResponseEntity<String>("fail", HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+	@GetMapping(value = "/pages/{board_id}/{page}" , produces = {MediaType.APPLICATION_JSON_VALUE})
+	public ResponseEntity<ReplyPageDTO> getList(
+	        @PathVariable("board_id") int board_id,
+	        @PathVariable("page") int page
+	        ){
+		System.out.println("===================================================================페이징");
+	    Criteria cri = new Criteria();
+	    
+	    cri.setPage(page);
+	    
+	    ReplyPageDTO result = replyService.getList(cri, board_id);
+	    
+	    return new ResponseEntity<>(result, HttpStatus.OK);
+	}
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-5.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- 시큐리티 설정 START -->
+	<security:http>
+		<!-- 권한 없이 모두 접근할수있다. -->
+		<security:intercept-url pattern="/sample/all"
+			access="permitAll" />
+		<!-- 권한이 멤버일 경우 접근할수있다. -->
+		<security:intercept-url
+			pattern="/sample/member" access="hasRole('ROLE_MEMBER')" />
+			<security:intercept-url
+			pattern="/sample/admin" access="hasRole('ROLE_ADMIN')" />
+		<security:form-login />
+		
+		<security:logout logout-url="/logout" logout-success-url="/login" />
+	</security:http>
+
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<security:user-service>
+			<!-- 서비스에 임시시큐리티테스트용 아이디생성 권한은 롤멤버 패스워드를 임의로 암호화시킨다. -->
+				<security:user name="member" password="{noop}1234" authorities="ROLE_MEMBER"/>
+				<security:user name="admin" password="{noop}1234" authorities="ROLE_ADMIN"/>
+			</security:user-service>
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+	<!-- 시큐리티 설정 END -->
+</beans>

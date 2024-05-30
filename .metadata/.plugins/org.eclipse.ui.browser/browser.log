@@ -1,0 +1,624 @@
+
+4월 04, 2024 10:00:16.354 NEW SESSION
+4월 04, 2024 10:00:16.354 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 05, 2024 13:10:14.849 NEW SESSION
+4월 05, 2024 13:10:14.849 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 14:16:14.265 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 14:28:20.128 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 14:29:46.677 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 14:32:00.223 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 14:32:24.133 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 14:41:14.517 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 14:44:35.200 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 14:56:48.397 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 15:30:01.643 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 15:32:05.06 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 15:54:15.862 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 16:20:26.923 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 16:27:34.149 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 17:18:18.313 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 17:42:28.37 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 05, 2024 17:54:50.661 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 08, 2024 09:45:17.941 NEW SESSION
+4월 08, 2024 09:45:17.941 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 09:46:30.547 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 11:16:09.892 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 11:37:13.263 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 11:41:15.325 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 11:53:29.783 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 12:20:44.885 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 08, 2024 13:17:59.305 NEW SESSION
+4월 08, 2024 13:17:59.306 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 14:31:38.676 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 14:41:38.186 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 14:46:48.74 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 14:54:38.811 [7508:16092:0408/145438.811:ERROR:interface_endpoint_client.cc(707)] Message 5 rejected by interface blink.mojom.WidgetHost
+4월 08, 2024 14:54:44.913 [7508:16092:0408/145444.913:ERROR:interface_endpoint_client.cc(707)] Message 5 rejected by interface blink.mojom.WidgetHost
+4월 08, 2024 15:40:56.03 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 16:15:00.589 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 17:26:38.499 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 17:42:02.459 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 17:54:10.506 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 17:57:23.739 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 08, 2024 17:59:23.234 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 09, 2024 10:09:10.406 NEW SESSION
+4월 09, 2024 10:09:10.406 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 10:39:29.59 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 11:04:59.785 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 11:45:29.845 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 12:18:23.09 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 12:26:37.415 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 14:21:54.675 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 14:22:29.215 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 14:24:44.843 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 14:27:51.403 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 14:28:38.964 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 15:58:57.974 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 16:33:59.412 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 17:11:09.989 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 09, 2024 17:26:56.13 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 11, 2024 14:29:05.499 NEW SESSION
+4월 11, 2024 14:29:05.499 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2024 14:29:12.916 [16028:16616:0411/142912.916:ERROR:get_updates_processor.cc(263)] PostClientToServerMessage() failed during GetUpdates with error Network error (ERR_ABORTED)
+4월 11, 2024 14:30:00.174 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2024 14:53:16.531 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2024 16:13:54.768 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2024 16:24:29.125 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2024 16:38:09.298 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2024 16:38:58.215 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2024 16:40:03.50 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2024 16:57:35.762 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2024 17:27:28.871 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 12, 2024 09:35:25.316 NEW SESSION
+4월 12, 2024 09:35:25.316 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 12, 2024 11:40:25.328 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 12, 2024 12:39:16.945 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 12, 2024 12:53:24.548 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 12, 2024 13:19:09.719 [9592:6076:0412/131909.719:ERROR:interface_endpoint_client.cc(707)] Message 5 rejected by interface blink.mojom.WidgetHost
+4월 12, 2024 13:58:39.21 [9592:6076:0412/135839.021:ERROR:interface_endpoint_client.cc(707)] Message 5 rejected by interface blink.mojom.WidgetHost
+4월 12, 2024 14:01:58.03 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 12, 2024 15:01:23.28 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 12, 2024 15:11:50.613 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 12, 2024 15:11:58.572 [8268:10172:0412/151158.571:ERROR:get_updates_processor.cc(263)] PostClientToServerMessage() failed during GetUpdates with error Network error (ERR_ABORTED)
+4월 12, 2024 15:17:57.437 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 12, 2024 16:51:45.530 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 12, 2024 17:02:21.295 [10600:17936:0412/170221.294:ERROR:sharing_service.cc(250)] Device un-registration failed with fatal error
+4월 12, 2024 17:02:22.337 [10600:17936:0412/170222.337:ERROR:device_event_log_impl.cc(195)] [17:02:22.337] Bluetooth: bluetooth_adapter_winrt.cc:1057 Getting Default Adapter failed.
+4월 12, 2024 17:09:40.207 [10600:17936:0412/170940.206:ERROR:interface_endpoint_client.cc(707)] Message 5 rejected by interface blink.mojom.WidgetHost
+
+4월 15, 2024 10:13:16.742 NEW SESSION
+4월 15, 2024 10:13:16.742 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 15, 2024 10:13:55.503 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 15, 2024 10:33:07.800 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 15, 2024 12:45:12.483 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 15, 2024 14:40:57.681 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 15, 2024 14:53:52.953 [16856:14948:0415/145352.953:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+4월 15, 2024 15:35:34.211 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 15, 2024 17:35:57.831 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 16, 2024 09:24:21.506 NEW SESSION
+4월 16, 2024 09:24:21.506 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 16, 2024 12:21:16.98 NEW SESSION
+4월 16, 2024 12:21:16.98 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 12:21:47.645 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 12:22:32.669 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 16, 2024 12:41:35.863 NEW SESSION
+4월 16, 2024 12:41:35.863 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 12:44:28.71 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 12:50:34.927 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 13:10:29.568 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 13:11:27.362 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 14:08:16.791 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 14:31:05.930 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 14:45:37.212 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 14:52:34.916 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 16, 2024 15:26:29.546 NEW SESSION
+4월 16, 2024 15:26:29.546 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 15:34:20.610 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 16:16:51.394 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 16:18:13.899 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 16:35:29.414 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 16, 2024 16:37:44.412 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 17, 2024 09:49:28.226 NEW SESSION
+4월 17, 2024 09:49:28.226 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 17, 2024 12:35:43.415 [5312:12836:0417/123543.414:ERROR:device_event_log_impl.cc(195)] [12:35:43.414] Bluetooth: bluetooth_adapter_winrt.cc:1057 Getting Default Adapter failed.
+4월 17, 2024 12:36:06.343 [5312:12836:0417/123606.343:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+4월 17, 2024 17:20:16.175 [5312:12836:0417/172016.175:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+4월 17, 2024 17:45:05.927 [5312:12836:0417/174505.927:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+4월 17, 2024 17:50:01.240 [5312:12836:0417/175001.240:ERROR:device_event_log_impl.cc(195)] [17:50:01.240] Bluetooth: bluetooth_adapter_winrt.cc:1057 Getting Default Adapter failed.
+
+4월 18, 2024 10:44:31.464 NEW SESSION
+4월 18, 2024 10:44:31.464 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 18, 2024 10:45:09.814 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 18, 2024 11:44:19.128 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 18, 2024 15:56:57.212 [18148:10092:0418/155657.211:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:56:58.956 [18148:10092:0418/155658.956:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:57:09.432 [18148:10092:0418/155709.432:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:59:44.295 [18148:10092:0418/155944.295:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:59:44.939 [18148:10092:0418/155944.931:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:59:45.52 [18148:10092:0418/155945.051:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:59:45.454 [18148:10092:0418/155945.454:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:59:46.459 [18148:10092:0418/155946.459:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:59:46.900 [18148:10092:0418/155946.900:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:59:47.101 [18148:10092:0418/155947.100:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:59:48.467 [18148:10092:0418/155948.467:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:59:48.830 [18148:10092:0418/155948.829:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:59:51.917 [18148:10092:0418/155951.917:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:59:52.300 [18148:10092:0418/155952.300:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:59:52.693 [18148:10092:0418/155952.693:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 18, 2024 15:59:52.949 [18148:10092:0418/155952.949:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+
+4월 19, 2024 09:40:37.515 NEW SESSION
+4월 19, 2024 09:40:37.515 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 19, 2024 10:02:51.863 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 19, 2024 10:42:51.864 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 19, 2024 11:31:31.270 [9132:17592:0419/113131.270:ERROR:get_updates_processor.cc(263)] PostClientToServerMessage() failed during GetUpdates with error Network error (ERR_ABORTED)
+4월 19, 2024 11:31:31.300 [9132:13676:0419/113131.299:ERROR:sharing_service.cc(250)] Device un-registration failed with fatal error
+4월 19, 2024 11:31:32.435 [9132:13676:0419/113132.434:ERROR:device_event_log_impl.cc(195)] [11:31:32.435] Bluetooth: bluetooth_adapter_winrt.cc:1057 Getting Default Adapter failed.
+4월 19, 2024 15:42:47.314 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 19, 2024 15:44:21.211 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 19, 2024 15:46:06.599 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 19, 2024 17:40:22.393 NEW SESSION
+4월 19, 2024 17:40:22.393 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 22, 2024 10:16:43.11 NEW SESSION
+4월 22, 2024 10:16:43.11 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 10:18:56.874 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 10:43:00.305 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 10:52:49.458 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 10:56:23.242 [16684:10368:0422/105623.242:ERROR:device_event_log_impl.cc(195)] [10:56:23.242] Bluetooth: bluetooth_adapter_winrt.cc:1056 Getting Default Adapter failed.
+4월 22, 2024 12:40:58.396 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 12:41:57.752 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 13:14:13.245 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 14:39:52.900 [8844:17456:0422/143952.899:ERROR:device_event_log_impl.cc(195)] [14:39:52.899] Bluetooth: bluetooth_adapter_winrt.cc:1056 Getting Default Adapter failed.
+4월 22, 2024 14:45:30.984 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 15:00:40.940 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 15:03:59.478 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 15:04:47.540 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 15:34:41.94 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 15:43:05.875 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 15:45:55.356 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 22, 2024 17:22:29.166 [6200:1000:0422/172229.165:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+4월 22, 2024 17:29:52.800 [6200:1000:0422/172952.799:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+4월 23, 2024 09:38:45.861 NEW SESSION
+4월 23, 2024 09:38:45.861 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 23, 2024 09:42:41.38 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 23, 2024 10:45:50.357 [10924:7516:0423/104550.356:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+4월 23, 2024 10:46:00.618 [10924:7516:0423/104600.618:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+4월 23, 2024 11:45:53.397 [10924:10332:0423/114553.397:ERROR:cert_verify_proc_builtin.cc(1052)] CertVerifyProcBuiltin for www.uhoon.co.kr failed:
+4월 23, 2024 11:45:53.397 ----- Certificate i=0 (CN=localhost,O=Default Company Ltd,L=Default City,C=XX) -----
+4월 23, 2024 11:45:53.397 ERROR: No matching issuer found
+4월 23, 2024 11:45:53.398 
+4월 23, 2024 11:45:53.398 
+4월 23, 2024 13:58:23.586 [10924:7516:0423/135823.586:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 23, 2024 13:58:27.691 [10924:7516:0423/135827.691:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 23, 2024 13:58:27.888 [10924:7516:0423/135827.888:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 23, 2024 13:58:28.73 [10924:7516:0423/135828.073:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 23, 2024 14:03:07.267 [10924:7516:0423/140307.266:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 23, 2024 14:03:08.954 [10924:7516:0423/140308.954:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 23, 2024 14:03:09.337 [10924:7516:0423/140309.337:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+4월 23, 2024 16:47:07.427 [10924:7516:0423/164707.426:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+4월 23, 2024 16:50:39.827 [10924:7516:0423/165039.827:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+4월 23, 2024 17:10:55.564 [10924:7516:0423/171055.563:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+4월 23, 2024 17:23:37.817 [10924:7516:0423/172337.817:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+4월 23, 2024 18:00:19.248 [10924:7516:0423/180019.247:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+4월 24, 2024 09:51:28.753 NEW SESSION
+4월 24, 2024 09:51:28.753 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 24, 2024 14:28:40.800 [7600:18364:0424/142840.799:ERROR:interface_endpoint_client.cc(707)] Message 1 rejected by interface blink.mojom.WidgetHost
+4월 24, 2024 14:28:40.800 [7600:18364:0424/142840.799:ERROR:interface_endpoint_client.cc(707)] Message 5 rejected by interface blink.mojom.WidgetHost
+4월 24, 2024 15:04:19.200 [7600:18364:0424/150419.200:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/components/utils/utils.js (1)
+4월 24, 2024 15:04:19.202 [7600:18364:0424/150419.202:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/components/utils/utils.js (1)
+
+4월 25, 2024 15:30:17.687 NEW SESSION
+4월 25, 2024 15:30:17.687 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 25, 2024 15:47:02.280 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 25, 2024 15:47:38.758 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 25, 2024 17:29:59.211 NEW SESSION
+4월 25, 2024 17:29:59.211 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 25, 2024 18:00:01.810 [11352:5088:0425/180001.810:ERROR:mcs_client.cc(749)] Received close command, resetting connection.
+
+4월 26, 2024 09:54:16.903 NEW SESSION
+4월 26, 2024 09:54:16.903 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 26, 2024 09:58:46.406 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 26, 2024 10:00:42.882 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 29, 2024 09:28:46.206 NEW SESSION
+4월 29, 2024 09:28:46.206 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 29, 2024 10:02:52.469 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 29, 2024 10:30:21.99 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 29, 2024 10:32:26.558 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 29, 2024 12:12:50.650 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 29, 2024 12:14:24.16 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 29, 2024 12:50:40.420 [10300:15492:0429/125040.419:ERROR:cert_verify_proc_builtin.cc(1052)] CertVerifyProcBuiltin for www.ttearth.com failed:
+4월 29, 2024 12:50:40.420 ----- Certificate i=0 (O=My Company Ltd,L=Newbury,ST=Berkshire,C=GB) -----
+4월 29, 2024 12:50:40.420 ERROR: No matching issuer found
+4월 29, 2024 12:50:40.420 
+4월 29, 2024 12:50:40.420 
+4월 29, 2024 13:57:32.49 [10300:15492:0429/135732.049:ERROR:cert_verify_proc_builtin.cc(1052)] CertVerifyProcBuiltin for global.ib-ibi.com failed:
+4월 29, 2024 13:57:32.49 ----- Certificate i=0 (CN=*.ib-ibi.com,O=KBM Group LLC,L=Louisville,ST=Colorado,C=US) -----
+4월 29, 2024 13:57:32.49 ERROR: Time is after notAfter
+4월 29, 2024 13:57:32.49 
+4월 29, 2024 13:57:32.49 
+4월 29, 2024 14:48:52.786 [10300:18984:0429/144852.786:ERROR:interface_endpoint_client.cc(707)] Message 2 rejected by interface blink.mojom.Widget
+
+4월 30, 2024 09:31:01.605 NEW SESSION
+4월 30, 2024 09:31:01.605 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 09:54:40.734 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 11:42:18.70 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 11:54:31.880 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 12:17:01.194 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 12:37:59.569 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 12:38:16.687 [13284:2144:0430/123816.687:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 30, 2024 12:38:49.693 [13284:2144:0430/123849.693:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 30, 2024 12:39:58.788 [13284:2144:0430/123958.788:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 30, 2024 12:41:58.939 [13284:2144:0430/124158.939:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 30, 2024 12:45:38.312 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 12:45:44.369 [11356:8124:0430/124544.369:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 30, 2024 12:46:15.941 [11356:8124:0430/124615.941:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 30, 2024 12:47:25.798 [11356:8124:0430/124725.798:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 30, 2024 13:12:35.89 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 13:17:06.581 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 14:10:14.926 [2596:7520:0430/141014.926:ERROR:interface_endpoint_client.cc(707)] Message 5 rejected by interface blink.mojom.WidgetHost
+4월 30, 2024 16:02:26.612 [2596:3592:0430/160226.612:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+4월 30, 2024 16:02:43.760 [2596:3592:0430/160243.760:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 30, 2024 16:03:30.564 [2596:3592:0430/160330.564:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 30, 2024 16:04:37.525 [2596:3592:0430/160437.525:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 30, 2024 16:06:19.656 [2596:3592:0430/160619.656:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 30, 2024 16:10:23.942 [2596:3592:0430/161023.942:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 30, 2024 16:12:50.00 [2596:7520:0430/161250.000:ERROR:device_event_log_impl.cc(195)] [16:12:49.999] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+4월 30, 2024 16:16:52.527 [2596:3592:0430/161652.527:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+4월 30, 2024 16:56:34.745 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 30, 2024 16:57:49.861 NEW SESSION
+4월 30, 2024 16:57:49.861 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 17:02:24.482 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 17:03:23.518 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 17:16:52.244 [4528:3772:0430/171652.244:ERROR:device_event_log_impl.cc(195)] [17:16:52.244] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+4월 30, 2024 17:42:45.482 [4528:3772:0430/174245.481:ERROR:device_event_log_impl.cc(195)] [17:42:45.480] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+
+5월 01, 2024 10:02:56.170 NEW SESSION
+5월 01, 2024 10:02:56.170 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 01, 2024 16:54:46.832 NEW SESSION
+5월 01, 2024 16:54:46.832 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 17:21:51.250 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 02, 2024 09:57:36.997 NEW SESSION
+5월 02, 2024 09:57:36.997 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 02, 2024 09:57:44.377 [13292:20044:0502/095744.377:ERROR:cert_verify_proc_builtin.cc(1052)] CertVerifyProcBuiltin for cdn.jsdelivr.net failed:
+5월 02, 2024 09:57:44.377 ----- Certificate i=0 (CN=sni.cloudflaressl.com,O=Cloudflare\, Inc.,L=San Francisco,ST=California,C=US) -----
+5월 02, 2024 09:57:44.377 ERROR: Time is after notAfter
+5월 02, 2024 09:57:44.377 
+5월 02, 2024 09:57:44.377 
+5월 02, 2024 12:37:32.445 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 07, 2024 09:31:11.532 NEW SESSION
+5월 07, 2024 09:31:11.532 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 07, 2024 10:10:06.920 [11472:10840:0507/101006.920:ERROR:cert_verify_proc_builtin.cc(1052)] CertVerifyProcBuiltin for sltourpf.com failed:
+5월 07, 2024 10:10:06.921 ----- Certificate i=0 (O=My Company Ltd,L=Newbury,ST=Berkshire,C=GB) -----
+5월 07, 2024 10:10:06.921 ERROR: No matching issuer found
+5월 07, 2024 10:10:06.921 
+5월 07, 2024 10:10:06.921 
+5월 07, 2024 10:14:27.546 [11472:10840:0507/101427.546:ERROR:cert_verify_proc_builtin.cc(1052)] CertVerifyProcBuiltin for cs.axis-marketplace.com failed:
+5월 07, 2024 10:14:27.547 ----- Certificate i=0 (CN=*.axis-marketplace.com) -----
+5월 07, 2024 10:14:27.547 ERROR: Time is after notAfter
+5월 07, 2024 10:14:27.547 
+5월 07, 2024 10:14:27.547 
+5월 07, 2024 10:34:08.199 [11472:10840:0507/103408.198:ERROR:cert_verify_proc_builtin.cc(1052)] CertVerifyProcBuiltin for cookie-sync.api.soundcast.fm failed:
+5월 07, 2024 10:34:08.199 ----- Certificate i=0 (CN=*.api.soundcast.fm) -----
+5월 07, 2024 10:34:08.199 ERROR: Time is after notAfter
+5월 07, 2024 10:34:08.199 
+5월 07, 2024 10:34:08.200 
+5월 07, 2024 11:55:17.212 [11472:14652:0507/115517.212:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:17.312 [11472:14652:0507/115517.312:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:17.419 [11472:14652:0507/115517.419:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:17.532 [11472:14652:0507/115517.532:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:17.652 [11472:14652:0507/115517.652:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:17.913 [11472:14652:0507/115517.913:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:18.29 [11472:14652:0507/115518.029:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:18.132 [11472:14652:0507/115518.132:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:18.269 [11472:14652:0507/115518.268:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:18.372 [11472:14652:0507/115518.372:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:18.653 [11472:14652:0507/115518.653:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:18.762 [11472:14652:0507/115518.762:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:18.906 [11472:14652:0507/115518.906:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:19.47 [11472:14652:0507/115519.047:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:19.155 [11472:14652:0507/115519.155:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:19.676 [11472:14652:0507/115519.676:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:22.371 [11472:14652:0507/115522.371:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:22.495 [11472:14652:0507/115522.495:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:22.858 [11472:14652:0507/115522.858:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:22.978 [11472:14652:0507/115522.978:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:23.95 [11472:14652:0507/115523.095:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:23.197 [11472:14652:0507/115523.197:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:23.313 [11472:14652:0507/115523.313:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:24.367 [11472:14652:0507/115524.367:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 11:55:24.646 [11472:14652:0507/115524.646:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.461 s for first_image_paint 0.445 s
+5월 07, 2024 12:22:26.493 [11472:10840:0507/122226.493:ERROR:cert_verify_proc_builtin.cc(1052)] CertVerifyProcBuiltin for theeye.pe.kr failed:
+5월 07, 2024 12:22:26.493 ----- Certificate i=0 (CN=m8u.87b.mywebsitetransfer.com) -----
+5월 07, 2024 12:22:26.494 ERROR: No matching issuer found
+5월 07, 2024 12:22:26.494 
+5월 07, 2024 12:22:26.494 
+5월 07, 2024 16:18:16.668 [11472:14652:0507/161816.668:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:16.774 [11472:14652:0507/161816.774:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:16.881 [11472:14652:0507/161816.880:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:16.990 [11472:14652:0507/161816.990:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:17.96 [11472:14652:0507/161817.096:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:17.338 [11472:14652:0507/161817.338:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:17.444 [11472:14652:0507/161817.443:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:17.549 [11472:14652:0507/161817.549:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:17.689 [11472:14652:0507/161817.689:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:17.874 [11472:14652:0507/161817.874:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:18.29 [11472:14652:0507/161818.029:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:18.132 [11472:14652:0507/161818.132:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:18.426 [11472:14652:0507/161818.426:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:18.542 [11472:14652:0507/161818.542:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:18.669 [11472:14652:0507/161818.669:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:19.430 [11472:14652:0507/161819.430:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:19.542 [11472:14652:0507/161819.542:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:19.695 [11472:14652:0507/161819.695:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:19.993 [11472:14652:0507/161819.993:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:20.108 [11472:14652:0507/161820.108:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:20.233 [11472:14652:0507/161820.233:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:22.06 [11472:14652:0507/161822.006:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:26.20 [11472:14652:0507/161826.020:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:27.253 [11472:14652:0507/161827.253:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:28.78 [11472:14652:0507/161828.078:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:28.624 [11472:14652:0507/161828.624:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:31.699 [11472:14652:0507/161831.699:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:18:32.184 [11472:14652:0507/161832.184:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:20:10.696 [11472:14652:0507/162010.696:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:20:10.816 [11472:14652:0507/162010.816:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:20:11.529 [11472:14652:0507/162011.529:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:20:11.645 [11472:14652:0507/162011.645:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:20:11.877 [11472:14652:0507/162011.877:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:20:11.979 [11472:14652:0507/162011.979:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:20:12.447 [11472:14652:0507/162012.447:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:20:12.567 [11472:14652:0507/162012.567:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+5월 07, 2024 16:20:17.685 [11472:14652:0507/162017.685:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.437 s for first_image_paint 0.427 s
+
+5월 10, 2024 09:27:25.414 NEW SESSION
+5월 10, 2024 09:27:25.415 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 10, 2024 09:40:20.592 [10124:16968:0510/094020.592:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 10, 2024 14:04:53.978 [10124:16968:0510/140453.978:ERROR:device_event_log_impl.cc(195)] [14:04:53.975] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 10, 2024 14:10:05.59 [10124:16968:0510/141005.059:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 10, 2024 15:37:15.445 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#56 is a dynamic-sized tensor).
+5월 10, 2024 15:39:13.26 [10124:12056:0510/153913.025:ERROR:cert_issuer_source_aia.cc(35)] Error parsing cert retrieved from AIA (as DER):
+5월 10, 2024 15:39:13.26 ERROR: Couldn't read tbsCertificate as SEQUENCE
+5월 10, 2024 15:39:13.26 ERROR: Failed parsing Certificate
+5월 10, 2024 15:39:13.26 
+5월 10, 2024 15:39:13.37 [10124:12056:0510/153913.037:ERROR:cert_verify_proc_builtin.cc(1052)] CertVerifyProcBuiltin for facebookgw.fila.co.kr failed:
+5월 10, 2024 15:39:13.37 ----- Certificate i=2 (CN=DST Root CA X3,O=Digital Signature Trust Co.) -----
+5월 10, 2024 15:39:13.38 ERROR: No matching issuer found
+5월 10, 2024 15:39:13.38 
+5월 10, 2024 15:39:13.38 
+5월 10, 2024 15:41:53.197 [10124:16968:0510/154153.197:ERROR:device_event_log_impl.cc(195)] [15:41:53.189] Bluetooth: bluetooth_adapter_winrt.cc:1056 Getting Default Adapter failed.
+5월 10, 2024 15:58:37.116 [10124:16968:0510/155837.116:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 10, 2024 15:59:53.184 [10124:16968:0510/155953.171:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 10, 2024 16:01:04.805 [10124:12056:0510/160104.805:ERROR:cert_verify_proc_builtin.cc(1052)] CertVerifyProcBuiltin for realmania.net failed:
+5월 10, 2024 16:01:04.805 ----- Certificate i=0 (O=My Company Ltd,L=Newbury,ST=Berkshire,C=GB) -----
+5월 10, 2024 16:01:04.805 ERROR: No matching issuer found
+5월 10, 2024 16:01:04.805 
+5월 10, 2024 16:01:04.805 
+5월 10, 2024 16:05:08.642 [10124:16968:0510/160508.642:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 10, 2024 16:06:43.920 [10124:16968:0510/160643.920:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+5월 13, 2024 09:23:26.355 NEW SESSION
+5월 13, 2024 09:23:26.355 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 13, 2024 10:33:18.988 [2872:18652:0513/103318.988:ERROR:device_event_log_impl.cc(195)] [10:33:18.978] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 13, 2024 11:34:36.877 [2872:18652:0513/113436.876:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 13, 2024 11:34:40.207 [2872:18652:0513/113440.207:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 13, 2024 11:34:45.624 [2872:18652:0513/113445.624:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 13, 2024 11:34:52.324 [2872:18652:0513/113452.323:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 13, 2024 11:49:49.862 [2872:18652:0513/114949.860:ERROR:interface_endpoint_client.cc(707)] Message 5 rejected by interface blink.mojom.WidgetHost
+5월 13, 2024 12:10:29.585 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 13, 2024 14:00:04.183 [6316:2152:0513/140004.183:ERROR:device_event_log_impl.cc(195)] [14:00:04.180] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+
+5월 13, 2024 14:02:39.683 NEW SESSION
+5월 13, 2024 14:02:39.683 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 13, 2024 16:00:14.716 [10656:10956:0513/160014.716:ERROR:device_event_log_impl.cc(195)] [16:00:14.716] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+
+5월 14, 2024 09:30:20.742 NEW SESSION
+5월 14, 2024 09:30:20.742 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 14, 2024 12:57:38.933 [2516:9340:0514/125738.932:ERROR:cert_verify_proc_builtin.cc(1052)] CertVerifyProcBuiltin for cdn.kldp.org failed:
+5월 14, 2024 12:57:38.933 ----- Certificate i=0 (CN=*.dev.kldp.org) -----
+5월 14, 2024 12:57:38.933 ERROR: Time is after notAfter
+5월 14, 2024 12:57:38.933 
+5월 14, 2024 12:57:38.933 
+5월 14, 2024 14:05:53.714 [2516:10156:0514/140553.713:ERROR:device_event_log_impl.cc(195)] [14:05:53.714] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 14, 2024 17:38:12.847 [2516:10156:0514/173812.847:ERROR:sharing_service.cc(250)] Device un-registration failed with fatal error
+
+5월 16, 2024 10:09:16.172 NEW SESSION
+5월 16, 2024 10:09:16.172 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 16, 2024 10:45:42.346 [11760:5292:0516/104542.346:ERROR:device_event_log_impl.cc(195)] [10:45:42.346] Bluetooth: bluetooth_adapter_winrt.cc:1056 Getting Default Adapter failed.
+5월 16, 2024 13:57:08.942 [11760:5292:0516/135708.941:ERROR:device_event_log_impl.cc(195)] [13:57:08.941] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+
+5월 17, 2024 09:30:10.899 NEW SESSION
+5월 17, 2024 09:30:10.899 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 17, 2024 12:31:36.870 [6804:7696:0517/123136.870:ERROR:device_event_log_impl.cc(195)] [12:31:36.870] Bluetooth: bluetooth_adapter_winrt.cc:1056 Getting Default Adapter failed.
+5월 17, 2024 13:58:22.419 [6804:7696:0517/135822.419:ERROR:device_event_log_impl.cc(195)] [13:58:22.419] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 17, 2024 14:14:09.358 [6804:7696:0517/141409.358:ERROR:device_event_log_impl.cc(195)] [14:14:09.358] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 17, 2024 14:37:10.844 [6804:7696:0517/143710.844:ERROR:interface_endpoint_client.cc(707)] Message 5 rejected by interface blink.mojom.WidgetHost
+5월 17, 2024 14:38:20.198 [6804:7696:0517/143820.198:ERROR:interface_endpoint_client.cc(707)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 17, 2024 14:38:20.199 [6804:7696:0517/143820.198:ERROR:interface_endpoint_client.cc(707)] Message 5 rejected by interface blink.mojom.WidgetHost
+5월 17, 2024 14:55:43.998 [6804:12076:0517/145543.998:ERROR:cert_issuer_source_aia.cc(35)] Error parsing cert retrieved from AIA (as DER):
+5월 17, 2024 14:55:43.999 ERROR: Couldn't read tbsCertificate as SEQUENCE
+5월 17, 2024 14:55:43.999 ERROR: Failed parsing Certificate
+5월 17, 2024 14:55:43.999 
+5월 17, 2024 14:55:44.23 [6804:12076:0517/145544.023:ERROR:cert_verify_proc_builtin.cc(1052)] CertVerifyProcBuiltin for weloveiconfonts.com failed:
+5월 17, 2024 14:55:44.23 ----- Certificate i=0 (CN=weloveiconfonts.com) -----
+5월 17, 2024 14:55:44.23 ERROR: Time is after notAfter
+5월 17, 2024 14:55:44.23 
+5월 17, 2024 14:55:44.24 
+5월 17, 2024 16:13:48.13 [6804:7696:0517/161348.012:ERROR:gpu_process_host.cc(997)] GPU process exited unexpectedly: exit_code=34
+
+5월 17, 2024 16:17:46.477 NEW SESSION
+5월 17, 2024 16:17:46.478 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 17, 2024 17:49:31.568 [10492:10500:0517/174931.568:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 17, 2024 17:49:40.696 [10492:10500:0517/174940.696:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 17, 2024 17:49:41.320 [10492:10500:0517/174941.320:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 17, 2024 17:49:41.719 [10492:10500:0517/174941.719:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 17, 2024 17:50:12.715 [10492:10500:0517/175012.715:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 17, 2024 17:50:51.829 [10492:10500:0517/175051.829:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 17, 2024 17:50:53.331 [10492:10500:0517/175053.331:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 17, 2024 17:50:53.869 [10492:10500:0517/175053.869:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 17, 2024 17:50:54.214 [10492:10500:0517/175054.213:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 17, 2024 17:51:12.84 [10492:10500:0517/175112.083:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 17, 2024 17:51:13.122 [10492:10500:0517/175113.121:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 17, 2024 17:51:13.328 [10492:10500:0517/175113.328:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 17, 2024 17:51:13.596 [10492:10500:0517/175113.595:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 17, 2024 18:47:29.267 [10492:10500:0517/184729.267:ERROR:device_event_log_impl.cc(195)] [18:47:29.267] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 17, 2024 20:59:11.825 [10492:9548:0517/205911.824:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+5월 17, 2024 20:59:12.591 [10492:9548:0517/205912.590:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+5월 20, 2024 09:25:57.671 [10492:9548:0520/092557.670:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -106
+5월 20, 2024 09:25:57.703 [10492:9548:0520/092557.702:ERROR:checkin_request.cc(243)] Check-in request got net error: -106
+5월 20, 2024 09:25:57.707 [10492:9548:0520/092557.707:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -106
+5월 20, 2024 09:25:57.736 [10492:9560:0520/092557.735:ERROR:get_updates_processor.cc(263)] PostClientToServerMessage() failed during GetUpdates with error Network error (ERR_INTERNET_DISCONNECTED)
+
+5월 20, 2024 09:30:44.504 NEW SESSION
+5월 20, 2024 09:30:44.504 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 20, 2024 10:11:21.111 [14480:8368:0520/101121.111:ERROR:interface_endpoint_client.cc(722)] Message 5 rejected by interface blink.mojom.WidgetHost
+5월 20, 2024 11:20:29.572 [14480:8368:0520/112029.572:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:29.674 [14480:8368:0520/112029.673:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:29.779 [14480:8368:0520/112029.779:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:29.904 [14480:8368:0520/112029.904:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:30.05 [14480:8368:0520/112030.005:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:30.107 [14480:8368:0520/112030.107:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:30.223 [14480:8368:0520/112030.223:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:30.325 [14480:8368:0520/112030.325:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:30.456 [14480:8368:0520/112030.456:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:30.597 [14480:8368:0520/112030.597:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:30.711 [14480:8368:0520/112030.711:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:31.54 [14480:8368:0520/112031.054:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:31.356 [14480:8368:0520/112031.356:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:31.467 [14480:8368:0520/112031.467:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:31.832 [14480:8368:0520/112031.832:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:31.941 [14480:8368:0520/112031.940:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:32.70 [14480:8368:0520/112032.070:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:33.649 [14480:8368:0520/112033.649:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:34.794 [14480:8368:0520/112034.794:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:34.970 [14480:8368:0520/112034.970:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:37.325 [14480:8368:0520/112037.324:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:37.442 [14480:8368:0520/112037.442:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:38.15 [14480:8368:0520/112038.015:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:38.126 [14480:8368:0520/112038.126:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:38.588 [14480:8368:0520/112038.588:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:38.691 [14480:8368:0520/112038.691:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:38.812 [14480:8368:0520/112038.812:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:39.482 [14480:8368:0520/112039.482:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:39.591 [14480:8368:0520/112039.591:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:39.717 [14480:8368:0520/112039.717:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 11:20:40.747 [14480:8368:0520/112040.747:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.435 s for first_image_paint 0.418 s
+5월 20, 2024 14:04:28.437 [14480:8368:0520/140428.437:ERROR:device_event_log_impl.cc(195)] [14:04:28.436] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 20, 2024 15:36:58.333 [14480:15676:0520/153658.333:ERROR:cert_verify_proc_builtin.cc(1051)] CertVerifyProcBuiltin for analytics.bizmatrixx.com failed:
+5월 20, 2024 15:36:58.334 ----- Certificate i=0 (emailAddress=root@bizmatrixx,CN=bizmatrixx,OU=SomeOrganizationalUnit,O=SomeOrganization,L=SomeCity,ST=SomeState,C=--) -----
+5월 20, 2024 15:36:58.334 ERROR: No matching issuer found
+5월 20, 2024 15:36:58.334 
+5월 20, 2024 15:36:58.334 
+
+5월 21, 2024 09:41:24.925 NEW SESSION
+5월 21, 2024 09:41:24.925 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 21, 2024 09:53:00.46 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 21, 2024 09:54:29.687 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 21, 2024 09:56:22.839 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 21, 2024 10:27:05.286 [4220:1052:0521/102705.286:ERROR:debug_utils.cc(14)] Hit debug scenario: 3
+5월 21, 2024 10:28:48.427 [4220:1052:0521/102848.427:ERROR:interface_endpoint_client.cc(722)] Message 5 rejected by interface blink.mojom.WidgetHost
+5월 21, 2024 10:30:43.154 [4220:8724:0521/103043.153:ERROR:cert_issuer_source_aia.cc(35)] Error parsing cert retrieved from AIA (as DER):
+5월 21, 2024 10:30:43.154 ERROR: Couldn't read tbsCertificate as SEQUENCE
+5월 21, 2024 10:30:43.154 ERROR: Failed parsing Certificate
+5월 21, 2024 10:30:43.154 
+5월 21, 2024 10:30:43.179 [4220:8724:0521/103043.179:ERROR:cert_verify_proc_builtin.cc(1051)] CertVerifyProcBuiltin for weloveiconfonts.com failed:
+5월 21, 2024 10:30:43.179 ----- Certificate i=0 (CN=weloveiconfonts.com) -----
+5월 21, 2024 10:30:43.180 ERROR: Time is after notAfter
+5월 21, 2024 10:30:43.180 
+5월 21, 2024 10:30:43.180 
+5월 21, 2024 14:03:08.548 [4220:1052:0521/140308.548:ERROR:device_event_log_impl.cc(195)] [14:03:08.549] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 21, 2024 14:21:17.466 [4220:8724:0521/142117.466:ERROR:cert_issuer_source_aia.cc(35)] Error parsing cert retrieved from AIA (as DER):
+5월 21, 2024 14:21:17.466 ERROR: Couldn't read tbsCertificate as SEQUENCE
+5월 21, 2024 14:21:17.466 ERROR: Failed parsing Certificate
+5월 21, 2024 14:21:17.466 
+5월 21, 2024 14:21:17.499 [4220:8724:0521/142117.499:ERROR:cert_verify_proc_builtin.cc(1051)] CertVerifyProcBuiltin for png.icons8.com failed:
+5월 21, 2024 14:21:17.499 ----- Certificate i=0 (CN=*.icons8.com) -----
+5월 21, 2024 14:21:17.499 ERROR: Time is after notAfter
+5월 21, 2024 14:21:17.499 
+5월 21, 2024 14:21:17.499 
+5월 21, 2024 15:49:41.630 [4220:1052:0521/154941.629:ERROR:device_event_log_impl.cc(195)] [15:49:41.630] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 21, 2024 16:00:00.162 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 21, 2024 16:12:34.534 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 21, 2024 16:14:57.411 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 21, 2024 16:22:51.452 [11308:2620:0521/162251.452:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 21, 2024 16:22:51.452 [11308:2620:0521/162251.452:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+5월 22, 2024 09:30:48.661 NEW SESSION
+5월 22, 2024 09:30:48.661 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 22, 2024 12:01:25.734 [3496:788:0522/120125.734:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 22, 2024 12:01:36.314 [3496:788:0522/120136.314:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 22, 2024 12:01:42.360 [3496:788:0522/120142.359:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 22, 2024 14:01:52.402 [3496:788:0522/140152.401:ERROR:device_event_log_impl.cc(195)] [14:01:52.400] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 22, 2024 14:35:54.887 [3496:788:0522/143554.886:ERROR:device_event_log_impl.cc(195)] [14:35:54.886] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 22, 2024 16:33:45.380 [3496:2416:0522/163345.380:ERROR:cert_verify_proc_builtin.cc(1051)] CertVerifyProcBuiltin for www.mins01.com failed:
+5월 22, 2024 16:33:45.380 ----- Certificate i=0 (CN=tsmu05.nayana.kr) -----
+5월 22, 2024 16:33:45.381 ERROR: Time is after notAfter
+5월 22, 2024 16:33:45.381 
+5월 22, 2024 16:33:45.381 
+
+5월 23, 2024 09:32:37.936 NEW SESSION
+5월 23, 2024 09:32:37.936 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 23, 2024 14:08:55.149 [3196:10308:0523/140855.149:ERROR:device_event_log_impl.cc(195)] [14:08:55.149] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 23, 2024 14:10:27.429 [3196:10308:0523/141027.429:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint (unset) for first_image_paint 0.581 s
+5월 23, 2024 14:10:27.652 [3196:10308:0523/141027.652:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:27.755 [3196:10308:0523/141027.755:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:28.11 [3196:10308:0523/141028.011:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:28.131 [3196:10308:0523/141028.131:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:28.259 [3196:10308:0523/141028.259:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:28.526 [3196:10308:0523/141028.526:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:28.629 [3196:10308:0523/141028.628:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:28.746 [3196:10308:0523/141028.746:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:28.871 [3196:10308:0523/141028.871:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:29.390 [3196:10308:0523/141029.390:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:29.495 [3196:10308:0523/141029.495:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:29.622 [3196:10308:0523/141029.622:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:29.762 [3196:10308:0523/141029.761:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:29.870 [3196:10308:0523/141029.870:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:29.977 [3196:10308:0523/141029.977:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:30.91 [3196:10308:0523/141030.091:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:30.783 [3196:10308:0523/141030.783:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:32.927 [3196:10308:0523/141032.927:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:33.27 [3196:10308:0523/141033.027:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:33.146 [3196:10308:0523/141033.146:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:38.405 [3196:10308:0523/141038.405:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:38.512 [3196:10308:0523/141038.512:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:39.133 [3196:10308:0523/141039.133:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:39.261 [3196:10308:0523/141039.261:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:39.795 [3196:10308:0523/141039.795:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:39.913 [3196:10308:0523/141039.913:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:43.992 [3196:10308:0523/141043.992:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:44.533 [3196:10308:0523/141044.533:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:44.862 [3196:10308:0523/141044.862:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:44.978 [3196:10308:0523/141044.978:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:45.346 [3196:10308:0523/141045.346:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:45.468 [3196:10308:0523/141045.468:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:46.17 [3196:10308:0523/141046.017:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:10:46.795 [3196:10308:0523/141046.795:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.597 s for first_image_paint 0.581 s
+5월 23, 2024 14:56:11.90 [3196:10308:0523/145611.089:ERROR:device_event_log_impl.cc(195)] [14:56:11.090] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 23, 2024 15:53:40.05 [3196:10308:0523/155340.004:ERROR:CONSOLE(1)] "Request Network.loadNetworkResource failed. {"code":-32602,"message":"Unsupported URL scheme"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 23, 2024 17:38:18.192 [3196:10308:0523/173818.192:ERROR:interface_endpoint_client.cc(722)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+5월 27, 2024 14:56:21.663 NEW SESSION
+5월 27, 2024 14:56:21.663 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 27, 2024 17:00:00.941 [11268:5512:0527/170000.941:ERROR:device_event_log_impl.cc(195)] [17:00:00.943] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 27, 2024 17:31:57.54 [11268:5512:0527/173157.053:ERROR:device_event_log_impl.cc(195)] [17:31:57.040] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)

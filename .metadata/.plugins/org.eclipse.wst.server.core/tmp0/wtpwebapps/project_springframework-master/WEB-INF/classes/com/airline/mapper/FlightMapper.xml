@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airline.mapper.FlightMapper">
+
+	<select id="getList" resultType="com.airline.vo.FlightVO">
+<!-- 	<![CDATA[
+		select c.* from(select b.* from(select row_number() over(order by DEPDAY asc) as num, a.* from airplaneschedule a)b where num<= #{cri.pageNum}* #{cri.amount})c where num>= (#{cri.pageNum}-1)* #{cri.amount}
+	 ]]>  -->
+	 	select * from airplaneschedule order by fulldeptime asc limit #{cri.newStart}, #{cri.amount} 
+	 </select>
+	
+	<select id="getListSearch" resultType="com.airline.vo.FlightVO">
+	<!-- <![CDATA[
+	 select c.* from
+	(select b.* from
+        (select row_number() over(order by DEPDAY asc) as num, a.* from airplaneschedule a
+			where 1 = 1
+			and DEPNAME like concat('%',#{dep},'%')
+			and ARRNAME like concat('%',#{arr},'%')
+			and DEPDAY like concat('%',#{time},'%')
+		)b where num<= #{cri.pageNum}*#{cri.amount})c where num>= (#{cri.pageNum}-1)*#{cri.amount}
+	 ]]>  --> 
+	 select * from airplaneschedule 
+	 	where DEPNAME like concat('%', #{dep}, '%') and ARRNAME like concat('%',#{arr},'%') and DEPDAY like concat('%', #{time}, '%')
+	 	order by fulldeptime asc, fno limit #{cri.newStart}, #{cri.amount}
+	</select>
+	
+	<select id="getListSearchByFlightName" resultType="com.airline.vo.FlightVO">
+	<!-- <![CDATA[
+	 select c.* from
+	(select b.* from
+        (select row_number() over(order by DEPDAY asc) as num, a.* from airplaneschedule a
+			where 1 = 1
+			and flightName like concat('%',#{flightName},'%')
+			and DEPDAY like concat('%',#{time},'%')
+		)b where num<= #{cri.pageNum}*#{cri.amount})c where num>= (#{cri.pageNum}-1)*#{cri.amount}
+	 ]]> --> 
+	 
+	 select * from airplaneschedule 
+	 	where flightName like concat('%', #{flightName}, '%') and DEPDAY like concat('%', #{time}, '%')
+	 	order by fulldeptime asc, fno limit #{cri.newStart}, #{cri.amount}
+	</select>
+	
+<!-- 	<select id="getListSearch2" resultType="com.airline.vo.FlightVO">
+	<![CDATA[
+	 select c.* from
+	(select b.* from
+        (select row_number() over(order by DEPDAY asc) as num, a.* from airplaneschedule a
+			where 1 = 1
+			and DEPNAME like concat('%',#{dep},'%')
+			and ARRNAME like concat('%',#{arr},'%')
+			and DEPDAY like concat('%',#{time},'%')
+		)b where num<= 1*10)c where num>= (1-1)* 10
+	 
+	 ]]>  
+	</select> -->
+	
+	<select id="getTotal" resultType="int">
+		select count(*) from airplaneschedule
+	</select>
+	
+	<select id="getTotalSearch" resultType="int">
+		select count(*) from airplaneschedule where 1 = 1
+			and DEPNAME like concat('%',#{dep},'%')
+			and ARRNAME like concat('%',#{arr},'%')
+			and DEPDAY like concat('%',#{time},'%')
+	</select>
+	
+	<select id="getTotalSearchByFlightName" resultType="int">
+		select count(*) from airplaneschedule where 1 = 1
+			and flightName like concat('%',#{flightName},'%')
+			and DEPDAY like concat('%',#{time},'%')
+	</select>
+	
+	<select id="getClosestFlightPrev" resultType="com.airline.vo.FlightVO">
+		<![CDATA[
+		select * from airplaneschedule 
+			where depname=#{dep} and arrname = #{arr} and depday < #{time} 
+			order by depday desc limit 1;
+		]]>
+	</select>
+	
+	<select id="getClosestFlightAfter" resultType="com.airline.vo.FlightVO">
+		<![CDATA[
+		select * from airplaneschedule 
+			where depname=#{dep} and arrname = #{arr} and depday > #{time} 
+			order by depday asc limit 1;
+		]]>
+	</select>
+	
+	<update id="updateSeatCount">
+		update airplaneschedule a set seatcount = (select 24-ifnull(count(*),0) from flightreservation b where b.flightname=#{flightName} and deptime like concat('%',#{time},'%')) 
+			where a.flightname=#{flightName} and a.depday like concat('%',#{time},'%');
+	</update>
+		
+	<select id="getDistinctDep" resultType="String">
+		select distinct(depName) from airplaneschedule where depName like concat('%',#{depName},'%') and depregioncode=#{depRegionCode} order by 1 asc
+	</select>
+
+	<select id="getDistinctArrRegionCode" resultType="String">
+		select distinct(arrRegionCode) from airplaneschedule where depName like concat('%',#{depName},'%') order by 1 asc
+	</select>
+
+	<select id="getDistinctArrByDep1" resultType="String">
+		select distinct(arrName) from airplaneschedule where depName = #{depName} and arrName like concat('%',#{arrName},'%') order by 1 asc
+	</select>
+
+	<select id="getDistinctArrByDep2" resultType="String">
+		select distinct(arrName) from airplaneschedule where depName = #{depName} and arrName like concat('%',#{arrName},'%') and arrRegioncode=#{arrRegionCode} order by 1 asc
+	</select>
+
+	<select id="getDistinctFlightName" resultType="String">
+		select distinct(flightname) from airplaneschedule where flightname like concat('%',#{flightName},'%') order by 1 asc
+	</select>
+	
+	<select id="getFlightInfo" resultType="com.airline.vo.FlightVO">
+		select * from airplaneschedule where fno=#{fno}
+	</select>
+	
+	<select id="getPrice" resultType="int">
+		select price from price where depname=#{depname} and arrname=#{arrname}
+	</select>
+	
+	<select id="getRoundTripPrice" resultType="int">
+		select sum(price) from price where depname=#{depname} and arrname = #{arrname} or depname=#{arrname} and arrname = #{depname};
+	</select>
+	
+	<select id="getUserAge" resultType="int">
+		select userReginumFirst from kakaouser where userid = #{userid}
+	</select>
+	
+	<select id="getAgeDiscount" resultType="float">
+		select ageDiscountRate from discountpolicy where ageGroup = #{age}
+	</select>
+	
+	<select id="getKakaoPoint" resultType="int">
+		select sum(amount) from point where userid=#{userid}
+	</select>
+	
+	<select id="getPoint" resultType="int">
+		select sum(mileage) from userpay where userid=#{userid}
+	</select>
+	
+	<select id="getCount" resultType="int">
+		select count(userid) from userpay where userid=#{userid}
+	</select>
+	
+	<select id="getKCount" resultType="int">
+		select count(userid) from point where userid=#{userid}
+	</select>
+	
+	<select id="getSeatPc" resultType="float">
+		select pricePercent from seatclass where seatclass=#{seat}
+	</select>
+	
+	
+	<select id="getEmail" resultType="String">
+		select mail from kakaouser where userid=#{userid}
+	</select>
+	
+	<select id="getUserName" resultType="String">
+		select userNameK from kakaouser where userid=#{userid}
+	</select>
+	
+	<insert id="insertRes" parameterType="java.util.Map" >
+		insert into flightreservation(resno, userid, userName, flightName, departure, arrival, arrTime, depTime, seatId, fno) values(#{resno},#{userid},#{username},#{flightname},#{departure},#{arrival},#{arrtime},#{deptime},#{seatid},#{fno})
+	</insert>
+	
+	<insert id="insertPay">
+		insert into userpay(userid, resno, price, mileage) values(#{userid}, #{rno}, #{total}, #{mileage})
+	</insert>
+	
+	<select id="getBuyCount" resultType="int">
+		select count(userid) from flightreservation <!-- <![CDATA[where isCancel <> 1]]> -->
+	</select>
+	
+	<select id="getTotalBuy" resultType="int">
+		select sum(price) from userpay where userid=#{userid}
+	</select>
+	
+	<select id="getCurrentMileage" resultType="int">
+		select sum(mileage) from userpay where userid=#{userid}
+	</select>
+	
+	<!-- 업데이트?? 인서트?? -->
+	<insert id="logUpdate">
+		insert into userlog(userid,totalcount, totalMileage,totalSum) values(#{userid},#{flightCount},#{userPoint},#{flightSum})
+		<!-- update userlog set totalCount=#{flightCount}, totalSum=#{flightSum}, totalMileage=#{userPoint} where userid=#{userid} -->
+	</insert>
+	
+	<select id="getCode" resultType="int">
+		select gradeCode from grade where gradeStandard = #{flightSum}
+	</select>
+	
+	<insert id="updateGrade">
+		update kakaouser set gradeCode=#{getCode} where userid=#{userid}
+	</insert>
+	
+	<select id="getOriCode" resultType="int">
+		select gradeCode from kakaouser where userid=#{userid}
+	</select>
+	
+	<insert id="insertGradeUpdate">
+		insert into userlog (userid, totalCount, totalMileage, totalSum) values(#{userid},#{flightCount},#{userPoint},#{flightSum})
+	</insert>
+	
+	<select id="getResInfo" resultType="com.airline.vo.FlightResVO">
+		select * from flightreservation where resno = #{rno}
+	</select>
+	
+	<select id="getUserInfo"  resultType="com.airline.vo.KakaoUserVO">
+		select * from kakaouser where userid=#{userid}
+	</select>
+	
+	<select id="getResFirst" resultType="com.airline.vo.FlightResVO">
+		select * from(select row_number() over(order by purchaseTime desc) rownum, r.* from flightreservation r where userid=#{userid}) p where rownum = 1
+	</select>
+	
+	<select id="usePoint" resultType="int">
+		select price from(select row_number() over(order by getDate desc) rownum, p.* from userpay p where userid=#{userid}and price is not null) s where rownum = 1;
+	</select>
+	
+	<select id="getResAll" resultType="com.airline.vo.FlightResVO">
+		select seatId from flightreservation where flightName=#{flightName} and fno=#{fno}
+	</select>
+	
+	<select id="ResCnt" resultType="int">
+		select count(seatId) from flightreservation where flightName=#{flightName}
+	</select>
+	
+	
+</mapper>

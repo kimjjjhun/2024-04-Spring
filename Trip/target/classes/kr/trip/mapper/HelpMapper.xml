@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.trip.mapper.HelpMapper">
+
+	<sql id="criterial">
+			<foreach collection="typeArr" item="type" separator="or">
+				<if test="type == 'T'.toString()">
+				 title like concat ('%', #{keyword}, '%')
+				</if>
+
+				<if test="type == 'C'.toString()">
+					content like concat ('%', #{keyword}, '%')
+				</if>
+
+				<if test="type == 'W'.toString()">
+					member_email like concat ('%', #{keyword}, '%')
+				</if>
+
+			</foreach>
+	</sql>
+
+	<select id="getListWithPaging" 
+		resultType="kr.trip.domain.HelpVO">
+		SELECT * FROM help 
+		<if test="keyword != null">
+		WHERE
+		</if>
+     <include refid="criterial"></include>
+LIMIT #{amount} OFFSET #{page}
+	
+	</select>
+
+	<select id="getListHelp" resultType="kr.trip.domain.HelpVO">
+		SELECT * FROM HELP WHERE help_id > 0
+	</select>
+
+	<insert id="insertHelp">
+		INSERT INTO help (member_email, title, content) VALUES
+		(#{member_email}, #{title}, #{content});
+	</insert>
+
+	<select id="readHelp" resultType="kr.trip.domain.HelpVO">
+		SELECT * FROM help WHERE help_id = #{help_id}
+	</select>
+	
+	<select id="readHelpA" resultType="kr.trip.domain.HelpaVO">
+	SELECT * FROM helpa WHERE help_id = #{help_id}
+	</select>
+
+	<update id="updateHelp">
+		UPDATE help SET title = #{title}, content = #{content}, image = #{image},
+		updateDate = CURRENT_TIMESTAMP
+		WHERE help_id = #{help_id}
+	</update>
+
+	<delete id="deleteHelp">
+		DELETE FROM help WHERE help_id = #{help_id}
+	</delete>
+
+	<select id="getTotalCount" resultType="int">
+		SELECT count(*) FROM help
+		WHERE
+		help_id > 0
+	</select>
+	
+	<insert id="insertHelpA">
+	INSERT INTO helpa (help_id, content, image, member_email) VALUES(#{help_id}, #{content}, #{image}, #{member_email})
+	</insert>
+	<update id="updateAnswer">
+		UPDATE help
+        SET answer = 1
+        WHERE help_id = #{help_id}
+	</update>
+
+</mapper>

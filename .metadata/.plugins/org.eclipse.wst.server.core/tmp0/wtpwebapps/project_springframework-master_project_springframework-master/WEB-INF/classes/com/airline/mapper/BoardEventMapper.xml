@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airline.mapper.BoardEventMapper">
+	
+	<select id="getList" resultType="com.airline.vo.BoardEventVO">
+		select * from boardEvent where isongoing!=0 order by boardNum
+	</select>
+	
+	<select id="getListwithPaging" resultType="com.airline.vo.BoardEventVO">
+		select * from boardEvent where
+		<if test="type=='boardTitle'.toString()">
+			boardTitle like concat('%',#{keyword},'%') and 
+		</if>
+		<if test="type=='boardContent'.toString()" >
+			boardContent like concat('%', #{keyword}, '%') and 
+		</if>
+  		 isongoing!=0
+		 order by endDate asc, 
+		 boardNum limit #{newStart}, #{amount}
+	</select>
+
+	<select id="getListPastEvent" resultType="com.airline.vo.BoardEventVO">
+		select * from boardEvent where
+		<if test="type=='boardTitle'.toString()">
+			boardTitle like concat('%',#{keyword},'%') and 
+		</if>
+		<if test="type=='boardContent'.toString()" >
+			boardContent like concat('%', #{keyword}, '%') and 
+		</if>
+  		 isongoing=0
+		 order by endDate asc, 
+		 boardNum limit #{newStart}, #{amount}
+	</select>
+
+	<select id="get" resultType="com.airline.vo.BoardEventVO">
+		select * from boardEvent where boardNum = #{boardNum}
+	</select>
+
+	<insert id="insert">
+		insert into boardEvent(boardTitle, boardContent, startDate, endDate) 
+		values(#{boardTitle}, #{boardContent}, #{startDate}, #{endDate})
+		<selectKey resultType="int" keyProperty="boardNum" order="AFTER">
+       		SELECT LAST_INSERT_ID()
+    	</selectKey>
+	</insert>
+
+	<delete id="delete">
+		delete from boardEvent where boardNum = #{boardNum}
+	</delete>
+
+	<update id="update">
+		update boardEvent set
+			boardTitle = #{boardTitle}, boardContent = #{boardContent}, modifydate = current_timestamp,
+				startDate = #{startDate}, endDate = #{endDate}
+			where boardNum = #{boardNum}
+	</update>
+	
+	<select id="getTotalCount" resultType="int">
+		select count(*) from boardEvent where isongoing!=0 
+		<if test="type=='boardTitle'.toString()">
+			and boardTitle like concat('%',#{keyword},'%')
+		</if>
+		<if test="type=='boardContent'.toString()" >
+			and boardContent like concat('%', #{keyword}, '%')
+		</if>
+
+	</select>
+
+	<select id="getTotalCountPastEvent" resultType="int">
+		select count(*) from boardEvent where isongoing=0 
+		<if test="type=='boardTitle'.toString()">
+			and boardTitle like concat('%',#{keyword},'%')
+		</if>
+		<if test="type=='boardContent'.toString()" >
+			and boardContent like concat('%', #{keyword}, '%')
+		</if>
+
+	</select>
+	
+	<update id="updateReadCount">
+		update boardEvent set readCount = readCount + 1 where boardNum = #{boardNum}
+	</update>
+	
+	<update id="updateRepImg">
+		update boardEvent set repImg = #{repImg}, filePath = #{filePath} where boardNum = #{boardNum}
+	</update>
+	
+	<select id="getListOverDue" resultType="com.airline.vo.BoardEventVO">
+		<![CDATA[
+			select * from boardEvent where isongoing!=0 and timestampdiff(second, #{time}, enddate)<0;
+		]]>
+	</select>
+	
+	<update id="updateOngoing">
+		update boardEvent set isOngoing = 0
+			where boardNum = #{boardNum}
+	</update>
+	
+</mapper>

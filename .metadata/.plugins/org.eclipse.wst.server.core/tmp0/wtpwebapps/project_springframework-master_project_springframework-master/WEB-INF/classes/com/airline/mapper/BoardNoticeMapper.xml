@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airline.mapper.BoardNoticeMapper">
+
+	<sql id="criteria">
+		<trim prefix="( where " suffix=") ">
+			<foreach collection="typeArr" item="type" separator="or">
+				<if test="type=='T'.toString()">
+					boardsubject like concat ('%',#{keyword},'%')
+				</if>	
+				<if test="type=='C'.toString()">
+					boardcontent like concat ('%',#{keyword},'%')
+				</if>	
+				<if test="type=='W'.toString()"> 
+					boardwriter like concat ('%',#{keyword},'%') 
+				</if>	
+			</foreach>
+		</trim>
+	</sql>   
+
+<select id="getList" resultType="com.airline.vo.BoardNoticeVO"> 
+	select * from boardnotice
+</select>
+
+<select id="getOne" resultType="com.airline.vo.BoardNoticeVO">
+	select * from boardnotice where boardnum = #{boardnum}
+</select>
+
+<select id="getTotal" resultType="int">
+	select count(*) from boardnotice
+			<if test="type=='T'.toString()">
+				where boardsubject like concat ('%',#{keyword},'%')
+			</if>	
+			<if test="type=='C'.toString()">
+				where boardcontent like concat ('%',#{keyword},'%')
+			</if>	
+			<if test="type=='W'.toString()">
+				where boardwriter like concat ('%',#{keyword},'%')
+			</if>
+</select>
+
+<select id="getUserList" resultType="com.airline.vo.KakaoUserVO">
+	select * from kakaouser
+</select>
+
+
+ <select id="getPageList" resultType="com.airline.vo.BoardNoticeVO">
+     	<![CDATA[
+     	select * from boardnotice where 
+     	]]>
+     			<if test="type=='T'.toString()">
+					boardsubject like concat ('%',#{keyword},'%') and
+				</if>	
+				<if test="type=='C'.toString()">
+					boardcontent like concat ('%',#{keyword},'%') and
+				</if>	
+				<if test="type=='W'.toString()">
+					boardwriter like concat ('%',#{keyword},'%') and
+				</if>	
+		<![CDATA[
+		(emergency =1 or emergency =0 or emergency=2)
+     	order by emergency desc,boardnum desc 
+     	limit #{amount} offset #{newStart}  
+     	]]>
+</select>
+
+
+<insert id="insert">
+	insert into boardnotice (boardsubject,boardcontent,boardwriter,emergency) values(#{boardsubject},#{boardcontent},#{boardwriter},#{emergency})
+</insert>
+
+<update id="modify">
+	update boardnotice set boardsubject=#{boardsubject} ,boardcontent=#{boardcontent}, modifydate=now(), emergency=#{emergency}
+	where boardnum=#{boardnum} 
+</update>
+
+<update id="updateReadCount">
+	update boardnotice set readcount= readcount+1 where boardnum = #{boardnum}
+</update>
+
+<delete id="delete">
+	delete from boardnotice where boardnum=#{boardnum}
+</delete>
+
+<select id="getAuthority" resultType="com.airline.vo.AuthorityVO">
+	select * from authorities where userid=#{userid}
+</select>
+
+<select id="getUser" resultType="com.airline.vo.KakaoUserVO">
+	select * from kakaouser where userid=#{userid}
+</select>
+
+<select id="noticePopup" resultType="com.airline.vo.BoardNoticeVO">
+	     	<![CDATA[
+     	select * from boardnotice where
+     	]]>
+     			<if test="type=='T'.toString()">
+					 boardsubject like concat ('%',#{keyword},'%') and
+				</if>	
+				<if test="type=='C'.toString()">
+					 boardcontent like concat ('%',#{keyword},'%') and
+				</if>	
+				<if test="type=='W'.toString()">
+					 boardwriter like concat ('%',#{keyword},'%') and
+				</if>	
+		<![CDATA[
+		 emergency=2
+     	order by boardnum desc
+     	limit #{amount} offset #{newStart} 
+     	]]>
+</select>
+
+<select id="popupTotal" resultType="int"> 
+	select count(*) from boardnotice where emergency =2
+</select>
+</mapper>

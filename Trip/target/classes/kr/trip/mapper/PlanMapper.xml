@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.trip.mapper.PlanMapper">
+<select id="getContentAreaList" resultType="kr.trip.domain.ContentVO">
+SELECT * FROM content WHERE areaname = #{areaname}
+</select>
+
+<insert id="insertTravelContent">
+INSERT INTO travelContent (plan_id, content_id, day, time) VALUES(#{plan_id}, #{content_id}, #{day}, #{time})
+</insert>
+<select id="getContentListOfPlanByPlanId" parameterType="int" resultType="kr.trip.domain.AllOfPlanDTO">
+    SELECT tp.plan_id, tp.regdate, tp.go, tp.end, tp.dayCnt, tp.tpa_id,tp.member_email,
+           tc.content_id, tc.day AS tc_day, tc.time AS tc_time,
+           c.ContentType, c.addr2, c.image1
+    FROM travelPlan tp
+    LEFT JOIN TravelContent tc ON tp.plan_id = tc.plan_id
+    LEFT JOIN content c ON tc.content_id = c.content_id
+    WHERE tp.plan_id = #{plan_id}
+</select>
+
+<select id="getContentListOfPlanByEmail" parameterType="string" resultType="kr.trip.domain.AllOfPlanDTO">
+    SELECT tp.plan_id, tp.regdate, tp.go, tp.end, tp.dayCnt, tp.tpa_id,tp.member_email,
+           tc.content_id, tc.day AS tc_day, tc.time AS tc_time,
+           c.ContentType, c.addr2, c.image1
+    FROM travelPlan tp
+    LEFT JOIN TravelContent tc ON tp.plan_id = tc.plan_id
+    LEFT JOIN content c ON tc.content_id = c.content_id
+    WHERE tp.member_email = #{member_email}
+</select>
+
+
+<delete id="deleteContent">
+delete from travelcontent where tcontent_id = #{tcontent_id}
+</delete>
+
+<delete id="deleteContentAll">
+delete from travelcontent where plan_id = #{plan_id}
+</delete>
+
+<select id="getAreaContent" resultType="kr.trip.domain.AreaVO">
+select * from area where areaname = #{areaname}
+</select>
+
+<select id="getAccommodationList" resultType="kr.trip.domain.ContentVO">
+select * from content where contentType = '숙소' AND areaname = #{areaname}
+</select>
+
+<insert id="insert">
+	insert into content(content_id, addr1, addr2, phone, cExplain, areaname, contentType, likeNum,image1)
+	values(#{content_id}, #{addr1},#{addr2},#{phone},#{cExplain},#{areaname},#{contentType},#{likeNum},#{image1 )
+</insert>
+
+<insert id="insertContentIntoPlan">
+		insert into travelContent(plan_id, content_id, dayCnt,time)
+		values(#{plan_id},#{content_id},#{dayCnt},#{time})
+	</insert>
+	
+	<insert id="insertTravelPlan">
+		insert into travelPlan(member_email,go, end)
+		values(#{member_email}, #{go}, #{end})
+	</insert>
+	
+	<update id="updateDayOfTravelPlan">
+		update travelplan set dayCnt = datediff(#{end},#{go})+1
+	</update>
+	
+	<update id="updateTravelPlan">
+		update travelplan set go=#{go},end=#{end},dayCnt=datediff(#{end},#{go})+1
+		 where plan_id = #{plan_id}
+	</update>
+	
+	<update id="updateTravelContent">
+		update travelContent set day = #{day}, time=#{time}
+		where plan_id = #{plan_id}
+	</update>
+	
+	<delete id="deleteFromTravelContent">
+		delete from travelContent where plan_id = #{plan_id} and content_id = #{content_id}
+	</delete>
+	
+	
+</mapper>

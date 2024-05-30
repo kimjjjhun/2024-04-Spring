@@ -1,0 +1,11 @@
+package kr.trip.service;
+
+import org.springframework.stereotype.Service;
+
+import kr.trip.domain.PIDTO;
+
+@Service
+public interface ImageService {
+	
+	void upload(PIDTO pidtom String member_email);
+}

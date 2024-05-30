@@ -1,0 +1,14 @@
+package kr.trip.domain;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class PIDTO {
+	private int image_id;
+	private String image_url;
+	private String member_email;
+}

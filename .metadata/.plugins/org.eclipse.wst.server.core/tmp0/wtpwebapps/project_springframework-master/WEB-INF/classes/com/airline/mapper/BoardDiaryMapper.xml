@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airline.mapper.BoardDiaryMapper">
+	
+	<select id="getList" resultType="com.airline.vo.BoardDiaryVO">
+		select * from boardDiary order by boardNum
+	</select>
+	
+	<select id="getListwithPaging" resultType="com.airline.vo.BoardDiaryVO">
+		select * from boardDiary 
+		<if test="type=='boardTitle'.toString()">
+			where boardTitle like concat('%',#{keyword},'%')
+		</if>
+		<if test="type=='boardContent'.toString()" >
+			where boardContent like concat('%', #{keyword}, '%')
+		</if>
+		<if test="type=='boardWriter'.toString()">
+			where boardWriter like concat('%', #{keyword}, '%')
+		</if>
+		 order by 
+		<choose>
+			<when test="order=='latest'.toString()">
+				boardNum desc,
+			</when>
+			<when test="order=='oldest'.toString()">
+				boardNum asc,
+			</when>
+			<when test="order=='readcount'.toString()">
+				readcount desc, boardNum desc,
+			</when>
+			<when test="order=='replycount'.toString()">
+				replycount desc, boardNum desc,
+			</when>
+			<when test="order=='likecount'.toString()">
+				likecount desc, boardNum desc,
+			</when>
+			<otherwise>
+				boardNum desc, 
+			</otherwise>
+		</choose>
+		
+		 boardNum limit #{newStart}, #{amount}
+	</select>
+	
+	<!-- <if test="order=='latest'.toString()">
+  			boardNum desc,
+  		</if>
+  		<if test="order=='oldest'.toString()" >
+  			boardNum asc,
+  		</if>
+  		<if test="order=='readcount'.toString()">
+  			readcount desc, boardNum desc,
+  		</if>
+  		<if test="order=='replycount'.toString()">
+  			replycount desc, boardNum desc,
+  		</if>
+  		<if test="order=='likecount'.toString()">
+  			likecount desc, boardNum desc,
+  		</if> -->
+
+	<select id="get" resultType="com.airline.vo.BoardDiaryVO">
+		select * from boardDiary where boardNum = #{boardNum}
+	</select>
+
+	<insert id="insert">
+		insert into boardDiary(boardTitle, boardContent, boardWriter, userId)
+		values(#{boardTitle}, #{boardContent}, #{boardWriter}, #{userId})
+	</insert>
+
+	<delete id="delete">
+		delete from boardDiary where boardNum = #{boardNum}
+	</delete>
+
+	<update id="update">
+		update boardDiary set
+			boardTitle = #{boardTitle}, boardContent = #{boardContent}, modifydate = current_timestamp
+				where boardNum = #{boardNum}
+	</update>
+	
+	<select id="getTotalCount" resultType="int">
+		select count(*) from boardDiary 
+		<if test="type=='boardTitle'.toString()">
+			where boardTitle like concat('%',#{keyword},'%')
+		</if>
+		<if test="type=='boardContent'.toString()" >
+			where boardContent like concat('%', #{keyword}, '%')
+		</if>
+		<if test="type=='boardWriter'.toString()">
+			where boardWriter like concat('%', #{keyword}, '%')
+		</if> 
+
+	</select>
+	
+	<update id="updateReplyCount">
+		update boardDiary set replycount = (select count(replyNum) from boardDiaryReply where boardNum = #{boardNum}) where boardNum = #{boardNum}
+	</update>
+	
+	<update id="updateReadCount">
+		update boardDiary set readCount = readCount + 1 where boardNum = #{boardNum}
+	</update>
+	
+	<update id="updateLikeCount">
+		update boardDiary set likecount = (select count(likeNum) from boardDiaryLike where boardNum = #{boardNum}) where boardNum = #{boardNum}
+	</update>
+	
+</mapper>

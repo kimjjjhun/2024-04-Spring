@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Criteria.java&apos; to &apos;Trip03/src/main/java/kr.trip.controller&apos;&#x0D;&#x0A;- Original project: &apos;ex06&apos;&#x0D;&#x0A;- Destination element: &apos;Trip03/src/main/java/kr.trip.controller&apos;&#x0D;&#x0A;- Original element: &apos;org.zerock.domain.Criteria.java&apos;" description="Copy compilation unit" destination="=Trip03/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.trip.controller" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;org.zerock.domain{Criteria.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1716364489603" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airline.mapper.AdminMapper">
+
+	<select id="getCancelList" resultType="com.airline.vo.CancelVO">
+		select * from cancel limit #{cri.pageNum},#{cri.amount}
+	</select>
+	
+	<select id="getCancelCnt" resultType="int">
+		select count(*) from cancel
+	</select>
+	
+	<select id="getResInfo" resultType="com.airline.vo.FlightResVO">
+		select * from flightreservation limit #{cri.newStart},#{cri.amount}
+	</select>
+	
+	<select id="getPayInfo" resultType="com.airline.vo.UserPayVO">
+		select * from userpay where resno=#{resno}
+	</select>
+	
+	<update id="updatePrice">
+		update userpay set price=#{price}, mileage=#{mileage} where resno=#{resno} 
+	</update>
+	
+	<select id="sumMile" resultType="int">
+		select sum(mileage) from userpay where userid=#{userid}
+	</select>
+	
+	<select id="sumPrice" resultType="int">
+		select sum(price) from userpay where userid=#{userid}
+	</select>
+	
+	<insert id="insertlog">
+		insert userlog(userid, totalMileage, totalSum) values(#{userid},#{sumMile},#{sumPrice})
+	</insert>
+	
+	<update id="updateCancel">
+		update cancel set cancelOk=1 where resno=#{resno}
+	</update>
+	
+	<select id="getTicketCnt" resultType="int">
+		select count(*) from flightreservation
+	</select>
+	
+	<select id="getUserInfo" resultType="com.airline.vo.KakaoUserVO">
+		select * from kakaouser limit #{cri.newStart},#{cri.amount}
+	</select>
+	
+	<select id="getUserCnt" resultType="int">
+		select count(*) from kakaouser
+	</select>
+	
+	<update id="updateUserInfo1">
+		update kakaouser set enabled=1 where userid=#{userid}
+	</update>
+	
+	<update id="updateUserInfo0">
+		update kakaouser set enabled=0 where userid=#{userid}
+	</update>
+	
+	<select id="getNotice" resultType="com.airline.vo.BoardNoticeVO">
+		select * from boardnotice limit #{cri.pageNum},#{cri.amount}
+	</select>
+	
+	<select id="noticeCnt" resultType="int">
+		select count(*) from boardnotice
+	</select>
+	
+	<delete id="deleteNotice">
+		delete from boardnotice where boardnum=#{boardnum}
+	</delete>
+	
+	<select id="getEvent" resultType="com.airline.vo.BoardEventVO">
+		select * from boardevent limit #{cri.pageNum}, #{cri.amount}
+	</select>
+	
+	<select id="eventCtn" resultType="int">
+		select count(*) from boardevent 
+	</select>
+	
+	<select id="getFlightList" resultType="com.airline.vo.FlightVO">
+		select * from airplaneschedule order by fulldeptime desc limit #{cri.pageNum},#{cri.amount}
+	</select>
+	
+	<select id="getFlightListCnt" resultType="int">
+		select count(*) from airplaneschedule 
+	</select>
+	
+	<select id="getFno" resultType="int">
+		select count(*) from airplaneschedule 
+	</select>
+	
+	<insert id="insertFlight">
+		insert into airplaneschedule(flightname,depday,arrday,fulldeptime,deptime,fullarrtime,arrtime,flighttime,fulldeparture,depcode,depname,fullarrival,arrcode,arrname,depregioncode,arrregioncode) values(#{vo.flightName}, #{vo.depDay}, #{vo.arrDay}, #{vo.fullDeptime}, #{vo.depTime}, #{vo.fullArrtime}, #{vo.arrTime}, #{vo.flightTime}, #{vo.fullDeparture}, #{vo.depCode}, #{vo.depName}, #{vo.fullArrival}, #{vo.arrCode}, #{vo.arrName}, #{vo.depRegionCode}, #{vo.arrRegionCode} )
+	</insert>
+	
+	<select id="getFlightInfo" resultType="com.airline.vo.FlightVO">
+		select * from airplaneschedule where fno=#{fno}
+	</select>
+	
+	<update id="modifyFlight">
+		update airplaneschedule set depday=#{vo.depDay},arrday=#{vo.arrDay},fulldeptime=#{vo.fullDeptime},deptime=#{vo.depTime},fullarrtime=#{vo.fullArrtime},arrtime=#{vo.arrTime} where fno=#{vo.fno}
+	</update>
+	
+	<insert id="insertFlightLog">
+		insert into adminflight(fno, reason, isdelete, depname, arrname,flightname)values(#{vo.fno},#{vo.reason},#{vo.isDelete},#{vo.depName},#{vo.arrName},#{vo.flightName})
+	</insert>
+	
+	<select id="flightNoticePopup" resultType="com.airline.vo.FlightVO">
+		select * from adminflight order by ano desc limit 0, 1
+		<!-- select * from airplaneschedule f left join adminflight a on f.fno=a.fno order by a.ano desc limit 0,1 -->
+	</select>
+	
+	<delete id="deleteFlight">
+		delete from airplaneschedule where fno=#{vo.fno}
+	</delete>
+	
+	<select id="getRegionCode" resultType="int">
+		select distinct depregioncode from airplaneschedule where depname=#{depName};
+	</select>
+	
+	<select id="getArrRegionCode" resultType="int">
+		select distinct arrregioncode from airplaneschedule where arrname=#{arrName};
+	</select>
+</mapper>

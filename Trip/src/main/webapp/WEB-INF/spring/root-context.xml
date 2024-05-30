@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		<!-- My SQL DataSource -->
+ 		<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://192.168.0.34:3306/project?useSSL=false&amp;serverTimezone=UTC"/>
+		<property name="username" value="test"/>
+		<property name="password" value="test1234!"/>
+		</bean>
+	<!-- 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		       <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>  
+		      <property name="url"   value="jdbc:mysql://192.168.0.60:3306/project?useSSL=false&amp;serverTimezone=UTC">    
+		    </property>   
+		         <property name="username" value="test"></property>    
+		        <property name="password" value="test1234!></property>  
+		      </bean>   -->
+		    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		    <property name="dataSource" ref="dataSource"/>
+		    </bean> 
+		    
+		    	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<tx:annotation-driven/>
+		    
+		    <context:component-scan base-package="kr.trip.service"/>
+		    
+		    <mybatis-spring:scan base-package="kr.trip.mapper"/>
+		    
+		    <context:component-scan base-package="kr.trip.aop"/>
+		    
+		    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.naver.com"/>
+	    <property name="port" value="465"/>
+	    <property name="username" value="dlgyqls11"/>
+	    <property name="password" value="dukkudukku0529"/>
+	    <!-- 보안연결 SSL과 관련된 설정 -->
+	    <property name="javaMailProperties">
+		    <props>
+		      <prop key="mail.smtp.auth">true</prop>
+		      <prop key="mail.smtp.starttls.enable">true</prop>
+		      <prop key="mail.smtps.checkserveridentity">true</prop>
+		      <prop key="mail.smtps.ssl.trust">*</prop>
+		      <prop key="mail.debug">true</prop>
+		      <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+		     </props>
+	     </property>
+	</bean>
+		    
+		    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+</beans>

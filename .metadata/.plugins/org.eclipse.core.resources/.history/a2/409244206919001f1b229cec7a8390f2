@@ -1,0 +1,13 @@
+package kr.trip.domain;
+
+import lombok.Data;
+
+@Data
+public class ProfileImageVO {
+	private int image_id;
+	private String member_email;
+	private String profile_name;
+	private int profile_size;
+	private String profile_content_type;
+	private 
+}

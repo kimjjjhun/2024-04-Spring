@@ -1,0 +1,247 @@
+/* 변수 선언 */
+:root {
+  --height: 49px;
+  --cellWidth: 65px;
+  --selectedColor: #349AEF;
+}
+
+/* Google Fonts 임포트 */
+@import url(https://fonts.googleapis.com/css?family=Roboto:500,500italic,400,400italic,300,300italic);
+
+/* 전체 스타일 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', serif;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+  margin-top:10px;
+}
+
+/* 캘린더 스타일 */
+.calendar {
+  width: 455px;
+  margin: auto;
+}
+
+/* 캘린더 범위 */
+.calendar__range {
+  color: #5d5d5d;
+  margin-bottom: 10px;
+}
+
+/* 캘린더 시작일 */
+.calendar__from-date {
+  min-width: 180px;
+  vertical-align: top;
+  min-height: 60px;
+}
+
+/* 캘린더 이미지 화살표 */
+.calendar__image-arrow {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: #dbd7db;
+  margin-right: 30px;
+  vertical-align: middle;
+}
+
+/* 캘린더 범위 헤더 */
+.calendar__range-h {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+/* 캘린더 범위 월 */
+.calendar__range-month {
+  font-size: 1.1rem;
+}
+
+/* 캘린더 범위 날짜 */
+.calendar__range-date {
+  font-size: 2.3rem;
+  line-height: 2.3rem;
+  font-weight: 100;
+  margin: 0 5px 0 -5px;
+}
+
+/* 캘린더 범위 요일 */
+.calendar__range-day {
+  font-size: 0.9rem;
+  color: #a2a2a2;
+  font-weight: 100;
+}
+
+/* 테이블 셀 */
+td {
+  padding: 0;
+  line-height: 1rem;
+}
+
+/* 캘린더 선택기 */
+.calendar__chooser {
+  background: #FFFDFF;
+  text-align: center;
+}
+
+/* 캘린더 헤더 */
+.calendar__header {
+  text-align: center;
+  width: 455px;
+  padding-top: 13px;
+  border-top: 1px solid #efefef;
+  margin-bottom: 4px;
+}
+
+/* 캘린더 월 선택기 */
+.calendar__month-chooser {
+  color: #5d5d5d;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  width: 455px;
+  padding: 0 30px;
+}
+
+/* 이전 달/다음 달 화살표 */
+.calendar__prev-month,
+.calendar__next-month {
+  float: left;
+  cursor: pointer;
+  color: #a2a2a2;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+/* 캘린더 요일 이름 */
+.calendar__days-names {
+  color: #a2a2a2;
+  font-size: 0.8rem;
+}
+
+/* 캘린더 요일 이름 셀 */
+.calendar__day-name {
+  min-width: var(--cellWidth);
+}
+
+/* 캘린더 랩퍼 */
+.calendar__wrap {
+  max-height: 301px;
+  overflow: hidden;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+}
+
+/* 캘린더 테이블 */
+.calendar__table {
+  transform: translate3d(0px, calc(-var(--height) - 1px * 4), 0px);
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  will-change: transform;
+}
+
+/* 캘린더 테이블 애니메이션 */
+.calendar__table.animate--forward {
+  animation: list-forward 0.3s forwards;
+}
+
+.calendar__table.animate--backward {
+  animation: list-backward 0.3s forwards;
+}
+
+/* 캘린더 셀 */
+.calendar__day {
+  z-index: -2;
+  min-width: var(--cellWidth);
+  padding: 0;
+  text-align: center;
+  color: #5D5D5D;
+  border-bottom: 1px solid white;
+}
+
+/* 캘린더 셀 호버 효과 */
+.calendar__day:hover .calendar__inner-day {
+  border-radius: var(--height);
+  border: 2px solid var(--selectedColor);
+}
+
+/* 비활성화된 캘린더 셀 */
+.calendar__day.dis {
+  background: #fcf9fc;
+  border-bottom: 1px solid #fcf9fc;
+}
+
+/* 선택된 캘린더 셀 */
+.calendar__day.selected {
+  background: var(--selectedColor);
+  color: white;
+  position: relative;
+}
+
+/* 선택된 시작 셀 */
+.calendar__day.sel--start {
+  position: relative;
+  color: white;
+}
+
+.calendar__day.sel--start:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: var(--selectedColor);
+  width: 20px;
+  height: var(--height);
+  top: 0;
+  right: 0;
+}
+
+/* 선택된 끝 셀 */
+.calendar__day.sel--end {
+  position: relative;
+}
+
+.calendar__day.sel--end:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: var(--selectedColor);
+  width: 30px;
+  height: var(--height);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* 선택된 캘린더 셀의 내부 날짜 */
+.calendar__inner-day {
+  height: var(--height);
+  width: var(--height);
+  line-height: calc(var(--height) - 4px);
+  border-radius: 100%;
+  border: 2px solid transparent;
+  margin: auto;
+}
+
+/* 애니메이션 키프레임 */
+@keyframes list-forward {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  100% {
+    transform: translate3d(0px, calc(-var(--height) - 
+     1px * 4), 0px);
+  }
+}
+
+@keyframes list-backward {
+  0% {
+    transform: translate3d(0px, calc(-var(--height) - 1px * 4), 0px);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}

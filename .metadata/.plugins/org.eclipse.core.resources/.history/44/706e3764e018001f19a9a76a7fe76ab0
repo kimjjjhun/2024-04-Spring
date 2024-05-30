@@ -1,0 +1,22 @@
+package kr.trip.service;
+
+import kr.trip.mapper.MemberMapper;
+
+public class ImageServiceImpl implements ImageService{
+	
+	private final ImageMapper imageMapper;
+	private final MemberMapper memberMapper;
+	
+	@Override
+	public void upload(ImageUploadDTO imageUploadDTO, String email) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ImageResponseDTO findImage(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

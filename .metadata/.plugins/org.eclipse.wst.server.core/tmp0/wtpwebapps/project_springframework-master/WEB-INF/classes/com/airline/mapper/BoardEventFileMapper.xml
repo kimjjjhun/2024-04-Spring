@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airline.mapper.BoardEventFileMapper">
+	
+	<select id="searchFileByBoardNum" resultType="com.airline.vo.BoardEventFileVO">
+		select * from boardEventFile where boardNum=#{boardNum} order by repImgYn desc, fileOrder asc
+	</select>
+	
+	<select id="fileCount" resultType="int">
+		select count(*) from boardEventFile where boardNum=#{boardNum}
+	</select>
+
+	<insert id="insert">
+		insert into boardEventFile(boardNum, uuid, uploadpath, filename, filetype, fileOrder, repImgYn, fileSize) 
+		values(#{boardNum}, #{uuid}, #{uploadPath}, #{fileName}, #{fileType}, #{fileOrder}, #{repImgYn}, #{fileSize})
+	</insert>
+	
+	<delete id="delete">
+		delete from boardEventFile where uuid=#{uuid}
+	</delete>
+	
+	<delete id="deleteAll">
+		delete from boardEventFile where boardNum=#{boardNum}
+	</delete>
+	
+	<select id="findRepImg" resultType="com.airline.vo.BoardEventFileVO">
+		select * from boardEventFile where repImgYn='Y' and boardNum = #{boardNum}
+	</select>
+	
+	<select id="findRepImgFiles" resultType="com.airline.vo.BoardEventFileVO">
+		select * from boardEventFile where repImgYn='Y'
+	</select>
+	
+	<select id="getOldFiles" resultType="com.airline.vo.BoardEventFileVO">
+		select * from boardEventFile where uploadpath = DATE_FORMAT(date_add(now(), interval -1 day), '%Y\%m\%d')
+		
+	</select>
+	
+	
+</mapper>

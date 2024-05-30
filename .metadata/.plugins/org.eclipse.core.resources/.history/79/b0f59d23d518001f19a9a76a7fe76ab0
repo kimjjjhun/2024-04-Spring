@@ -1,0 +1,25 @@
+package kr.trip.domain;
+
+
+
+
+
+import java.util.Date;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class ReplyVO {
+	private int replyNum;
+	private int board_id;
+	private String reply;
+	private String member_email;
+	private time replyDate;
+	private time updateDate;
+}

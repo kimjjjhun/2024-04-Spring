@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="org.zerock.mapper.MemberMapper">
+	
+	<insert id="insert">
+		insert into tbl_member(userid, userpw, name)
+		values(#{userid}, #{userpw},#{name})
+	</insert>
+	
+	<insert id="insertAuth">
+		insert into tbl_member_auth(userid, auth)
+		values(#{userid},#{auth})
+	</insert>
+	
+	<resultMap type="org.zerock.domain.MemberVO" id="memberMap">
+	
+	<id property="userid" column="userid" />
+	
+	<result property="userid" column="userid"/>
+	<result property="userpw" column="userpw"/>
+	<result property="name" column="username"/>
+	<result property="enabled" column="enabled"/>
+	<result property="regDate" column="regDate"/>
+	<result property="updateDate" column="updateDate"/>
+	
+	<!-- 가져온 값을 authlist에 담는다. -->
+	<collection property="authList" resultMap="authMap"></collection>
+	</resultMap>
+	
+	<resultMap type="org.zerock.domain.AuthVO" id="authMap">
+		<result property="userid" column="userid"/>
+		<result property="auth" column="auth"/>
+	
+	</resultMap>
+	
+	<select id="read" resultMap="memberMap">
+		select m.userid, userpw, username, enabled, regdate, updatedate, auth
+		from 
+		tbl_member m left outer join tbl_member_auth a
+		on m.userid = a.userid 
+		where m.userid = #{userid}
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

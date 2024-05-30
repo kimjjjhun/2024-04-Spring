@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airline.mapper.BoardDiaryReplyMapper">
+		
+	<insert id="insertReply">
+		insert into boardDiaryReply(boardNum, replyWriter, replyContent, userId)
+		values(#{boardNum}, #{replyWriter}, #{replyContent}, #{userId})
+	</insert>
+	
+	<select id="replyCount" resultType="int">
+		select count(*) from boardDiaryReply where boardNum = #{boardNum} and boardNum>0
+	</select>
+	
+	<select id="selectAllReply" resultType="com.airline.vo.BoardDiaryReplyVO">
+		select * from boardDiaryReply where boardNum = #{boardNum}
+		 order by boardNum limit #{cri.newStart}, #{cri.amount}
+	</select>
+
+	<update id="updateReply">
+		update boardDiaryReply set
+			replyContent = #{replyContent}, modifydate = current_timestamp
+				where replyNum = #{replyNum}
+	</update>
+	
+	<delete id="deleteReply">
+		delete from boardDiaryReply where replyNum = #{replyNum}
+	</delete>
+	
+	<select id="selectOneReply" resultType="com.airline.vo.BoardDiaryReplyVO">
+		select * from boardDiaryReply where replyNum = #{replyNum}
+	</select>
+	
+</mapper>

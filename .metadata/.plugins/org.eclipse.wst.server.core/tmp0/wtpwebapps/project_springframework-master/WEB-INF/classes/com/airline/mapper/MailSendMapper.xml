@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airline.mapper.MailSendMapper">
+	<update id="updateMailKey" parameterType="java.util.Map">
+		update kakaouser set mail_key = #{mail_key} where mail = #{email}
+	</update>
+	
+<!-- 	<select id="checkedMailKey" resultType="com.airline.vo.KakaoUserVO">
+		select * from kakaouser where mail_key = {mail_key}
+	</select> -->
+	
+	<update id="resetMailKey" >
+		update kakaouser set mail_key = 0 where mail = #{email}
+	</update>
+	
+	
+</mapper>

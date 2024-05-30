@@ -1,0 +1,297 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sec"
+	uri="http://www.springframework.org/security/tags"%>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../resources/board/list.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<style>
+.calendar_container {
+    position:absolute;
+    left:29%;
+    top:25%;
+    display: flex;
+    justify-content:space-evenly;
+    width: 42%;
+    background-color: white;
+    box-shadow: 1px 1px 25px rgb(0, 0, 0 / 17%);
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.hide {
+    display:none;
+}
+
+.calendar_container > button {
+    margin-top: 4%;
+    font-weight: bold;
+    height:10%;
+}
+
+.left_button {
+    margin-left:17%;
+    border: transparent;
+}
+
+.right_button {
+    margin-right:17%;
+    border: transparent;
+}
+
+.calendar {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-top: 3%;
+    margin-right:2.5%;
+}
+
+
+.calendar_days > button  {
+    width: 48px;
+    height: 47px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: transparent;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.day {
+    text-align: center;
+    font-size:12px;
+    font-weight: bold;
+    color:rgb(189, 189, 189);
+}
+
+
+.day_hover {
+    border: 1px solid black !important;
+}
+
+.day_selected {
+    background-color: black !important;
+    color: #ffff;
+}
+
+.gray {
+    background-color: rgb(241, 241, 241) !important;
+}
+
+
+	</style>
+
+</head>
+
+<%@include file="../header.jsp"%>
+
+<body>
+	<div class="page-title">
+		<div class="container">
+			<h3 style="margin-top: 30px;"><a class="nav-link" href="/board/list"><strong>M Y P A G E</strong></a></h3>
+		</div>
+	</div>
+
+	<!-- board list area -->
+	<div id="board-list">
+		<div class="container">
+			<table class="board-table">
+				<thead>
+					<tr>
+						 <th scope="col" class="th-num">계획</th>
+						 <th scope="col" class="th-date">NAME</th>
+						 <th scope="col" class="th-date">REGDATE</th>
+						<th scope="col" class="th-date">PLAN GO</th>
+						<th scope="col" class="th-date">PLAN END</th>
+						<th scope="col" class="th-date">TRIP DAY</th>
+						<th scope="col" class="th-date">교통편</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<c:forEach var="member" items="${list}">
+						<tr>
+							<td>${plan.plan_id}</td>
+							<td>${board.member_email}</td>
+							<td><fmt:formatDate value="${plan.regdate}"	pattern="yyyy-MM-dd" /></td>
+							<td><fmt:formatDate value="${plan.go}"	pattern="yyyy-MM-dd" /></td>
+							<td><fmt:formatDate value="${plan.end}"	pattern="yyyy-MM-dd" /></td>
+							<td><fmt:formatDate value="${plan.day}"	pattern="yyyy-MM-dd" /></td>
+							<td>${plan.plan_tpa}</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">일정 선택</button><br>
+	<button data-oper='list' class="btn btn-dark" style="margin-top: 20px; margin-right: 20px; float: right;">돌아가기</button>
+
+			<!-- 페이징 처리 -->
+	<div class="row">
+		<div class="col-lg-12">
+			<ul class="pagination"
+				style="float: right; margin-right: 100px; margin-top: 30px">
+				<c:if test="${pageMaker.prev}">
+					<li class="page-item"><a class="page-link"
+						href="${pageMaker.startPage - 1}">이전</a></li>
+				</c:if>
+				<c:forEach var="num"
+					begin="${pageMaker.startPage > 0 
+						? pageMaker.startPage : 1}"
+					end="${pageMaker.endPage}">
+					<li class="page-item ${pageMaker.cri.pageNum == num ? "active" : ""} ">
+						<a class="page-link" href="${num}">${num}</a>
+					</li>
+				</c:forEach>
+
+				<c:if test="${pageMaker.next}">
+					<li class="page-item"><a class="page-link"
+						href="${pageMaker.endPage}">다음</a></li>
+				</c:if>
+
+			</ul>
+		</div>
+	</div>
+
+	<form id="actionForm" action="/board/list" method="get">
+		<input type="hidden" name="pageNum" value=${pageMaker.cri.pageNum}>
+		<input type="hidden" name="amount" value=${pageMaker.cri.amount}>
+		<input type="hidden" name="type" value=${pageMaker.cri.type}>
+		<input type="hidden" name="keyword" value=${pageMaker.cri.keyword}>
+	</form>
+			<!-- End 페이징 처리 -->
+			
+			<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+     <div class = "calendar_container"> 
+        
+        <button class = "left_button"> &lt </button>
+        
+        <table class = "calendar">
+            <th class = "title">2월</th>
+            <tbody>
+                <tr class = "week">
+                    <td class = "day">일</td>
+                    <td class = "day">월</td>
+                    <td class = "day">화</td>
+                    <td class = "day">수</td>
+                    <td class = "day">목</td>
+                    <td class = "day">금</td>
+                    <td class = "day">토</td>
+                </tr>
+                <tr>    <!-- 달력 첫 번째 줄-->
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                </tr>
+                <tr>    <!-- 달력 두 번째 줄-->
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                </tr>
+                <tr>    <!-- 달력 세 번째 줄-->
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                </tr>
+                <tr>    <!-- 달력 네 번째 줄-->
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                </tr>
+                <tr>    <!-- 달력 다섯 번째 줄-->
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                </tr>
+                <tr>    <!-- 달력 여섯 번째 줄-->
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                    <td class = "calendar_days" roll = "button"> </td>
+                </tr>
+            </tbody>
+        </table>
+
+      
+
+        
+        <button class = "right_button"> > </button>
+    </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+			
+			
+			
+
+	
+	<!-- 캘린더 모달 스크립트-->
+	    <script src = "calendar.js"></script>
+
+</body>
+</html>
+
+<%@include file="../footer.jsp"%>

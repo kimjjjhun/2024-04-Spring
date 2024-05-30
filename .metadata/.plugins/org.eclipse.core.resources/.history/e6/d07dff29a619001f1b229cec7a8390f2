@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.trip.mapper.BoardMapper">
+
+	<sql id="criterial">
+		<foreach collection="typeArr" item="type" separator="or">
+			<if test="type == 'T'.toString()">
+				WHERE title like concat ('%', #{keyword}, '%')
+			</if>
+
+			<if test="type == 'C'.toString()">
+				WHERE content like concat ('%', #{keyword}, '%')
+			</if>
+
+			<if test="type == 'W'.toString()">
+				WHERE member_email like concat ('%', #{keyword}, '%')
+			</if>
+
+		</foreach>
+	</sql>
+
+
+
+
+<!-- 게시글 작성 -->
+<insert id="insert" parameterType="kr.trip.domain.BoardVO">
+    INSERT INTO board (member_email, title, content)
+    VALUES (#{member_email}, #{title}, #{content})
+    <selectKey keyProperty="board_id" resultType="int" order="AFTER">
+        SELECT LAST_INSERT_ID()
+    </selectKey>
+</insert>
+
+	<!-- 게시글 읽기 -->
+	<select id="read" resultType="kr.trip.domain.BoardVO">
+		select * from board where board_id = #{board_id}
+	</select>
+	<!-- 게시글 수정 -->
+	<update id="update">
+		update board set
+		title = #{title},
+		content = #{content},
+		member_email = #{member_email},
+		updatedate = now()
+		where board_id = #{board_id}
+	</update>
+	<!-- 게시글 삭제 -->
+	<delete id="delete">
+		delete from board where board_id = #{board_id}
+	</delete>
+
+
+	<select id="getListWithPaging"
+		resultType="kr.trip.domain.BoardVO">
+		SELECT * FROM board
+		<include refid="criterial"></include>
+		LIMIT #{amount} OFFSET #{page}
+
+	</select>
+
+	<select id="getTotalCount" resultType="int">
+		select count(*) from board
+		<include refid="criterial"></include>
+	</select>
+
+
+	<select id="search" resultType="kr.trip.domain.BoardVO">
+
+	</select>
+
+	<update id="updateReplyCnt">
+		update board set replyCnt = replyCnt + #{amount} where board_id =
+		#{board_id}
+	</update>
+
+	<!-- 게시글좋아요 -->
+	<insert id="boardlike">
+	INSERT INTO board_like (board_id, member_email)
+        VALUES (#{board_id}, #{member_email})
+	</insert>
+	
+	<update id="like">
+ UPDATE board SET likeNum =likeNum +1 WHERE board_id = #{board_id};
+ 	</update>
+	
+	<!-- 게시글 좋아요 취소 -->
+
+	<delete id="boardunlike">
+		DELETE FROM board_like WHERE board_id = #{board_id} AND member_email = #{member_email}
+	</delete>
+	
+     <update id="likeremove">
+ UPDATE board SET likeNum = likeNum -1 WHERE board_id = #{board_id};
+ 	</update>
+	
+	<!-- 게시글 좋아요 상태 -->
+	
+	<select id="getCountByboard_like" resultType="int">
+	 select count(likeNum) from board where board_id = #{board_id} and member_email = #{member_email}
+	</select>
+	
+
+	
+</mapper>
